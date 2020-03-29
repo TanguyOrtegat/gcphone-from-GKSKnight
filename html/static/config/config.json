@@ -35,7 +35,7 @@
     
     "//": "REQUIRE https://github.com/citizenfx/screenshot-basic or set false",
     "enableTakePhoto": true,
-    "fileUploadService_Url": "http://94.23.57.43/up.php",
+    "fileUploadService_Url": "http://xx.xx.xx.xx/up.php",
     "fileUploadService_Field": "files",
   "background": {
     "Calvin & Hobbes": "back001.jpg",
