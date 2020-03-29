@@ -1,0 +1,1725 @@
+{
+	"reseau": " Server",
+	"warningMessageCount": 250,
+	"themeColor": "#303f9f",
+	"colors": [
+		"#EF5350",
+		"#EC407A",
+		"#AB47BC",
+		"#7E57C2",
+		"#5C6BC0",
+		"#42A5F5",
+		"#29B6F6",
+		"#26C6DA",
+		"#26A69A",
+		"#66BB6A",
+		"#9CCC65",
+		"#D4E157",
+		"#FFCA28",
+		"#FFA726",
+		"#FF7043",
+		"#8D6E63",
+		"#78909C"
+	],
+    "useFormatNumberFrance": false,
+    "License": "22072911",
+    
+    "useWebRTCVocal": false,
+    "RTCConfig": {
+		"iceServers": [{
+		  "urls": ["turn:numb.viagenie.ca"],
+		  "username": "webrtc@live.com",
+		  "credential": "muazkh"
+		}]
+	  },
+    
+    "//": "REQUIRE https://github.com/citizenfx/screenshot-basic or set false",
+    "enableTakePhoto": true,
+    "fileUploadService_Url": "http://94.23.57.43/up.php",
+    "fileUploadService_Field": "files",
+  "background": {
+    "Calvin & Hobbes": "back001.jpg",
+    "Destiny": "back002.jpg",
+    "Stormtrooper": "back003.jpg",
+	"Thatcher": "R6.jpg",
+  	"Fortnite": "FORTNITE.jpg",
+  	"Tohka & Yoshinon": "Tohka&Yoshinon.jpg",
+	"Sword Art Online": "sao.jpg",
+    "Emilia": "Emilia.jpg",
+    "Rétro 1 ": "back001.jpg",
+    "Rétro 2": "back002.jpg",
+    "Rétro 3": "back003.jpg",
+    "Rétro 4": "back004.jpg",
+    "Rétro 5": "back005.jpg",
+    "Rétro 6": "back006.jpg",
+    "Rétro 7": "back007.jpg",
+    "Rétro 8": "back008.gif",
+    "Rétro 9": "back009.gif",
+    "Guitare": "01.jpg",
+    "Los Santos": "02.jpg",
+    "Poursuite": "03.jpg",
+    "Franklin": "04.jpg",
+    "Police boom": "05.jpg",
+    "Trevor & Michael": "06.jpg",
+    "San Andreas": "07.jpg",
+    "Cité": "08.jpg",
+    "Ciel & Forêt": "09.jpg",
+    "Forêt Colorer": "10.jpg",
+    "Vague Géante": "11.jpg",
+    "Lion": "12.jpg",
+    "Planète": "13.jpg",
+    "Rose": "14.jpg",
+    "Bleu": "15.jpg",
+    "Noir": "16.jpg",
+    "Chocolat": "17.jpg",
+    "Assassins Creed": "18.jpg",
+    "Stalactite": "19.jpg",
+    "Origin": "20.jpg",
+    "Pacman": "21.jpg",
+    "Custom URL": "URL"
+  },
+  "background_default": {
+    "label": "Rétro 8",
+    "value": "back008.gif"
+  },
+  "coque": {
+	"Sansumg S8": "s8.png",
+    "Iphone X": "iphonex.png"
+  },
+  "coque_default": {
+    "label": "Iphone X",
+    "value": "iphonex.png"
+  },
+    "ringtone": {
+        "Ringtone 1": "ring.ogg",
+        "Ringtone 2": "ring2.ogg",
+        "Ringtone 3": "Phone_Call_Sound_Effect.ogg"
+    },
+    "ringtone_default": {
+        "label": "Ringtone 1",
+        "value": "ring.ogg"
+    },
+"serviceCall": [
+    {
+      "display": "Police",
+      "icon": "/html/static/img/icons_app/policier.png",
+      "subMenu": [
+        {
+          "title": "Signaler un vol",
+          "eventName": "police",
+          "type": "Vol"
+        },
+        {
+          "title": "Signaler une agression",
+          "eventName": "police",
+          "type": "Aggression"
+        },
+        {
+          "title": "Signaler coup de feu",
+          "eventName": "police",
+          "type": "Coup de feu"
+        },
+        {
+          "title": "Signaler vol voiture",
+          "eventName": "police",
+          "type": "Vol voiture"
+        },
+        {
+          "title": "Appeller la police",
+          "eventName": "police"
+        },
+		{
+          "title": "Premier Secours",
+          "eventName": "police",
+          "type": "Premier Secours"
+        }
+      ]
+    },
+    {
+      "display": "Ambulance",
+      "icon": "/html/static/img/icons_app/ambulancier.png",
+      "subMenu": [
+        {
+          "title": "NORD Appel pour réanimation",
+          "eventName": "ambulance",
+          "type": "NORD Une personne est dans le coma"
+        },
+	    {
+          "title": "NORD Appel pour des soins",
+          "eventName": "ambulance",
+          "type": "NORD J'ai besoin de soins"
+        },	
+		{
+          "title": "SUD Appel pour réanimation",
+          "eventName": "ambulance",
+          "type": "SUD Une personne est dans le coma"
+        },
+	    {
+          "title": "SUD Appel pour des soins",
+          "eventName": "ambulance",
+          "type": "SUD J'ai besoin de soins"
+        },	
+	    {
+          "title": "Alerte Incendie",
+          "eventName": "ambulance",
+          "type": "POMPIER Alerte Incendie"
+        },			
+        {
+          "title": "Appeller les secours",
+          "eventName": "ambulance"
+        }
+      ]
+    },
+	{
+      "display": "Taxi",
+      "icon": "/html/static/img/icons_app/taxi.png",
+      "subMenu": [
+        {
+          "title": "Taxi pour 1 personne",
+          "eventName": "taxi",
+          "type": "Taxi 1 personne svp"
+        },
+        {
+          "title": "Taxi pour 2 personnes",
+          "eventName": "taxi",
+          "type": "Taxi 2 personnes svp"
+        },
+        {
+          "title": "Taxi pour 3 personnes",
+          "eventName": "taxi",
+          "type": "taxi 3 personnes svp"
+        },
+        {
+          "title": "Appeller un taxi",
+          "eventName": "taxi"
+        }
+      ]
+    },
+    {
+      "display": "Mecano",
+      "icon": "/html/static/img/icons_app/mecano.png",
+      "subMenu": [
+        {
+          "title": "Vehicule en panne",
+          "eventName": "mecano",
+          "type": "Panne vehicule"
+        },
+        {
+          "title": "Accident",
+          "eventName": "mecano",
+          "type": "Accident"
+        },
+        {
+          "title": "Commande kits",
+          "eventName": "mecano",
+          "type": "Commande kits"
+        },
+        {
+          "title": "Appeller un mécano",
+          "eventName": "mecano"
+        }
+      ]
+    },
+    {
+      "display": "Gouvernement",
+      "icon": "/html/static/img/icons_app/state.png",
+      "subMenu": [
+        {
+          "title": "Appeller le gouvernement",
+          "eventName": "state"
+        }
+      ]
+    },
+    {
+      "display": "Banquier",
+      "icon": "/html/static/img/icons_app/banquier.png",
+      "subMenu": [
+        {
+          "title": "Demande de rendez-vous",
+          "eventName": "banker",
+          "type": "RDV"
+        },
+        {
+          "title": "Paiement Crédit",
+          "eventName": "banker",
+          "type": "Demande de crédit"
+        },
+        {
+          "title": "Appeller un banquier",
+          "eventName": "banker"
+        }
+      ]
+    },
+    {
+      "display": "Bahamas",
+      "icon": "/html/static/img/icons_app/bahama.png",
+      "subMenu": [
+        {
+          "title": "Appeller le bahamas",
+          "eventName": "bahamas"
+        }
+      ]
+    },
+    {
+      "display": "Ammunation",
+      "icon": "/html/static/img/icons_app/ammunation.png",
+      "subMenu": [
+        {
+          "title": "Appeller l'ammunation",
+          "eventName": "biker"
+        }
+      ]
+    },
+    {
+      "display": "Agent Immobilier",
+      "icon": "/html/static/img/icons_app/agent.png",
+      "subMenu": [
+        {
+          "title": "Demande de visite",
+          "eventName": "realestateagent",
+          "type": "Visite immobilier"
+        },
+        {
+          "title": "Demande d'achat",
+          "eventName": "realestateagent",
+          "type": "Achat immobilier"
+        },
+        {
+          "title": "Demande de Location",
+          "eventName": "realestateagent",
+          "type": "Location immobilier"
+        },
+        {
+          "title": "Appeller un Agent immobilier",
+          "eventName": "realestateagent"
+        }
+      ]
+    },
+    {
+      "display": "Fermier",
+      "icon": "/html/static/img/icons_app/Fermier.png",
+      "subMenu": [
+        {
+          "title": "Appeller un fermier",
+          "eventName": "fermier"
+        }
+      ]
+    },
+    {
+      "display": "Tequila",
+      "icon": "/html/static/img/icons_app/tequila.png",
+      "subMenu": [
+        {
+          "title": "Appeller un épicier",
+          "eventName": "brewer"
+        }
+      ]
+    },
+    {
+      "display": "FoodTruck",
+      "icon": "/html/static/img/icons_app/foodTruck.png",
+      "subMenu": [
+        {
+          "title": "Appeller foodtruck",
+          "eventName": "foodtruck"
+        }
+      ]
+    },
+    {
+      "display": "Unicorn",
+      "icon": "/html/static/img/icons_app/unicorn.png",
+      "subMenu": [
+        {
+          "title": "Commande boissons",
+          "eventName": "unicorn",
+          "type": "Commande boissons"
+        },
+        {
+          "title": "Commande dance public",
+          "eventName": "unicorn",
+          "type": "Dance public"
+        },
+        {
+          "title": "Commande dance privée",
+          "eventName": "unicorn",
+          "type": "Dance Privée"
+        },
+        {
+          "title": "Appeller au unicorn",
+          "eventName": "unicorn"
+        }
+      ]
+    },
+    {
+      "display": "Epicier",
+      "icon": "/html/static/img/icons_app/epicerie.png",
+      "subMenu": [
+        {
+          "title": "Commande Boissons",
+          "eventName": "trucker",
+          "type": "Commande boissons"
+        },
+        {
+          "title": "Commande Nourriture",
+          "eventName": "trucker",
+          "type": "Commande boissons"
+        },
+        {
+          "title": "Commande autres",
+          "eventName": "trucker",
+          "type": "Commande autres"
+        }
+      ]
+    },
+    {
+      "display": "Brinks",
+      "icon": "/html/static/img/icons_app/brinks.png",
+      "subMenu": [
+        {
+          "title": "Appeller un Agent de la brinks",
+          "eventName": "brinks"
+        }
+      ]
+    },
+    {
+      "display": "Avocat-Juge",
+      "icon": "/html/static/img/icons_app/lawyer.png",
+      "subMenu": [
+        {
+          "title": "Demande de rendez-vous",
+          "eventName": "lawyer",
+          "type": "Demande de RDV"
+        },
+        {
+          "title": "RDV parloir",
+          "eventName": "lawyer",
+          "type": "RDV parloir"
+        },
+        {
+          "title": "Appeller un avocat-Juge",
+          "eventName": "lawyer"
+        }
+      ]
+    },
+    {
+      "display": "Airlines",
+      "icon": "/html/static/img/icons_app/airlines.png",
+      "subMenu": [
+        {
+          "title": "Appeller un Pilote airlines",
+          "eventName": "airlines"
+        }
+      ]
+    },
+    {
+      "display": "WeazelNews",
+      "icon": "/html/static/img/icons_app/journaliste.png",
+      "subMenu": [
+        {
+          "title": "Appeller un journaliste",
+          "eventName": "ftnews"
+        }
+      ]
+    },
+    {
+      "display": "Irish Export",
+      "icon": "/html/static/img/app_tchat/splashtchat.png",
+      "subMenu": [
+        {
+          "title": "Appeller un employer Ferrara Export",
+          "eventName": "johnson"
+        }
+      ]
+    },
+    {
+      "display": "LSPI",
+      "icon": "/html/static/img/icons_app/GasStation.png",
+      "subMenu": [
+        {
+          "title": "Appeller un LSPI",
+          "eventName": "fuel"
+        }
+      ]
+    },
+    {
+      "display": "Staff",
+      "icon": "/html/static/img/icons_app/staff.png",
+      "subMenu": [
+        {
+          "title": "Appeller le Staff",
+          "eventName": "staff"
+        }
+      ]
+    }
+  ],
+    
+	"defaultContacts": [
+	],
+
+    "apps": [
+        {
+            "name": "Twitter",
+            "fr_FR__name": "Twitter",
+            "tr_TR__name": "Twitter",
+            "en_US__name": "Twitter",
+            "de_DE__name": "Twitter",
+            "pl_PL__name": "Twitter",
+            "es_ES__name": "Twitter",
+            "icons": "/html/static/img/icons_app/twitter.png",
+            "routeName": "twitter.splash",
+            "inHomePage": true
+        },
+        {
+            "name": "Telefon",
+            "fr_FR__name": "Téléphonne",
+            "tr_TR__name": "Telefon",
+            "cs_CZ__name": "Telefon",
+            "en_US__name": "Phone",
+            "de_DE__name": "Telefon",
+            "pl_PL__name": "Telefon",
+            "es_ES__name": "llamar",
+            "icons": "/html/static/img/icons_app/call.png",
+            "routeName": "appels",
+            "inHomePage": true
+        },
+        {
+            "name": "Poruke",
+            "fr_FR__name": "Messages",
+            "tr_TR__name": "Mesajlar",
+            "en_US__name": "Messages",
+            "cs_CZ__name": "Zprávy",
+            "de_DE__name": "Nachrichten",
+            "pl_PL__name": "Wiadomości",
+            "es_ES__name": "Mensajes",
+            "icons": "/html/static/img/icons_app/sms.png",
+            "routeName": "messages",
+            "inHomePage": true,
+            "puceRef": "nbMessagesUnread"
+        },
+        {
+            "name": "Kontakti",
+            "fr_FR__name": "Contacts",
+            "tr_TR__name": "Rehber",
+            "en_US__name": "Contacts",
+            "cs_CZ__name": "Kontakty",
+            "de_DE__name": "Kontakte",
+            "pl_PL__name": "Kontakty",
+            "es_ES__name": "Contactos",
+            "icons": "/html/static/img/icons_app/contacts.png",
+            "routeName": "contacts",
+            "inHomePage": true
+        },
+        {
+            "name": "Podešavanja",
+            "fr_FR__name": "Paramètres",
+            "tr_TR__name": "Ayarlar",
+            "en_US__name": "System",
+            "cs_CZ__name": "Nastavení",
+            "de_DE__name": "Einstellungen",
+            "pl_PL__name": "Ustawienia",
+            "es_ES__name": "Ajustes",
+            "icons": "/html/static/img/icons_app/settings.png",
+            "routeName": "parametre",
+            "inHomePage": true
+        },
+        {
+            "name": "Banka",
+            "fr_FR__name": "Banque",
+            "tr_TR__name": "Banka",
+            "en_US__name": "Bankmanager",
+            "cs_CZ__name": "Banka",
+            "de_DE__name": "Bank",
+            "pl_PL__name": "Lawka",
+            "es_ES__name": "Banquillo",
+            "icons": "/html/static/img/icons_app/bank.png",
+            "routeName": "bank",
+            "inHomePage": true
+        },
+        {
+            "name": "Berza",
+            "fr_FR__name": "Bourse",
+            "tr_TR__name": "Borsa",
+            "cs_CZ__name": "Burza",
+            "en_US__name": "Stock Market",
+            "de_DE__name": "Börse",
+            "icons": "/html/static/img/icons_app/bourse.png",
+            "routeName": "bourse",
+            "enabled": true
+        },
+        {
+            "name": "Kamera",
+            "fr_FR__name": "Photo",
+            "tr_TR__name": "Kamera",
+            "cs_CZ__name": "Fotoaparát",
+            "en_US__name": "Camera",
+            "de_DE__name": "Kamera",
+            "pl_PL__name": "Kamera",
+            "es_ES__name": "Cámara",
+            "icons": "/html/static/img/icons_app/photo.png",
+            "routeName": "photo"
+        },
+        {
+            "name": "Dark Chat",
+            "fr_FR__name": "Dark Chat",
+            "tr_TR__name": "Dark Chat",
+            "en_US__name": "Dark Chat",
+            "de_DE__name": "Dark Net",
+            "pl_PL__name": "Czat czarny",
+            "es_ES__name": "Chat Oscuro",
+            "icons": "/html/static/img/icons_app/tchat.png",
+            "routeName": "tchat"
+        },
+        {
+            "name": "Oglasi",
+            "fr_FR__name": "Pages jaune",
+            "tr_TR__name": "Sarı Sayfalar",
+            "en_US__name": "Yellow Pages",
+            "de_DE__name": "Sarı Sayfalar",
+            "pl_PL__name": "Czat czarny",
+            "es_ES__name": "Chat Oscuro",
+            "icons": "/html/static/img/yellowpages/logo.png",
+            "routeName": "yellowpages",
+            "inHomePage": true
+        },
+        {
+            "name": "Računi",
+            "fr_FR__name": "Factures",
+            "tr_TR__name": "Faturalar",
+            "en_US__name": "Billing",
+            "de_DE__name": "Faturalar",
+            "pl_PL__name": "Czat czarny",
+            "es_ES__name": "Chat Oscuro",
+            "icons": "/html/static/img/fatura/logo.png",
+            "routeName": "faturaslash",
+            "inHomePage": true
+        },
+        {
+            "name": "Instagram",
+            "fr_FR__name": "Instagram",
+            "tr_TR__name": "Instagram",
+            "en_US__name": "Instagram",
+            "de_DE__name": "Instagram",
+            "pl_PL__name": "Instagram",
+            "es_ES__name": "Instagram",
+            "icons": "/html/static/img/instagram/instagram.png",
+            "routeName": "instagramslash",
+            "inHomePage": true
+        },
+        {
+            "name": "2048",
+            "fr_FR__name": "2048",
+            "tr_TR__name": "2048",
+            "en_US__name": "2048",
+            "de_DE__name": "2048",
+            "pl_PL__name": "2048",
+            "es_ES__name": "2048",
+            "icons": "/html/static/img/2048/logo.png",
+            "routeName": "numbers",
+            "inHomePage": false
+        },
+        {
+            "name": "Tetris",
+            "fr_FR__name": "Tetris",
+            "tr_TR__name": "Tetris",
+            "en_US__name": "Tetris",
+            "de_DE__name": "Tetris",
+            "pl_PL__name": "Tetris",
+            "es_ES__name": "Tetris",
+            "icons": "/html/static/img/2048/logo2.png",
+            "routeName": "tetris",
+            "inHomePage": false
+        },
+        {
+            "name": "Snake",
+            "fr_FR__name": "Snake",
+            "tr_TR__name": "Snake",
+            "en_US__name": "Snake",
+            "de_DE__name": "Snake",
+            "pl_PL__name": "Snake",
+            "es_ES__name": "Snake",
+            "icons": "/html/static/img/2048/snake.png",
+            "routeName": "snake",
+            "inHomePage": false
+        },
+        {
+            "name": "Reddit",
+            "fr_FR__name": "Reddit",
+            "tr_TR__name": "Reddit",
+            "en_US__name": "Reddit",
+            "de_DE__name": "Dark Net",
+            "pl_PL__name": "Czat czarny",
+            "es_ES__name": "Chat Oscuro",
+            "icons": "/html/static/img/icons_app/reddit.png",
+            "routeName": "reddit",
+            "inHomePage": true
+        },
+        {
+            "name": "Vijesti",
+            "fr_FR__name": "Journal",
+            "tr_TR__name": "Haberler",
+            "en_US__name": "Haberler",
+            "de_DE__name": "Haberler",
+            "pl_PL__name": "Haberler",
+            "es_ES__name": "Haberler",
+            "icons": "/html/static/img/2048/haber.png",
+            "routeName": "haberlerslplash",
+            "inHomePage": true
+        },
+        {
+            "name": "Trgovina",
+            "fr_FR__name": "Marché",
+            "tr_TR__name": "Market",
+            "en_US__name": "Market",
+            "de_DE__name": "Market",
+            "pl_PL__name": "Market",
+            "es_ES__name": "Market",
+            "icons": "/html/static/img/icons_app/market.png",
+            "routeName": "marketslsh",
+            "inHomePage": true
+        },
+        {
+            "name": "9GAG",
+            "icons": "/html/static/img/icons_app/9gag.png",
+            "routeName": "9gag"
+        }
+    ],
+    "defaultLanguage": "tr_TR",
+    "language": {
+        "fr_FR": {
+            "NAME": "français",
+			"PHONE_WARNING_MESSAGE": "enregistrer",
+			"PHONE_WARNING_MESSAGE_MESS": "actualités",
+			"CONFIRMER": "Accepter",
+			"ANNULER": "Annuler",
+			"APP_CONFIG_TITLE": "Paramètres",
+			"APP_CONFIG_MY_MUNBER": "Mon numéro",
+			"APP_CONFIG_WALLPAPER": "Contexte",
+			"APP_CONFIG_CASE": "Modèle de téléphone",
+			"APP_CONFIG_ZOOM": "Zoom",
+			"APP_CONFIG_VOLUME": "Force",
+			"APP_CONFIG_LANGUAGE": "Langue",
+			"APP_CONFIG_MOUSE_SUPPORT": "Contrôle souris",
+			"APP_CONFIG_RESET": "Format",
+			"APP_CONFIG_RESET_CONFIRM": "SUPPRIMER TOUT",
+			"APP_PHONE_CALL": "Appeler",
+			"APP_PHONE_CALL_ANONYMOUS": "Appeler anonyme",
+			"APP_PHONE_DELETE": "Supprimer",
+			"APP_PHONE_DELETE_ALL": "Supprimer tout!",
+			"APP_PHONE_TITLE": "Numéro de téléphone",
+			"APP_PHONE_MENU_FAVORITES": "Favoris",
+			"APP_PHONE_MENU_RECENTS": "Dernières",
+			"APP_PHONE_MENU_CONTACTS": "Contacts",
+			"APP_PHONE_ENTER_NUMBER": "Entrez le numéro",
+			"APP_PHONE_NUMBER_HIDDEN": "Numéro masqué",
+			"APP_PHONE_NUMBER_UNKNOWN": "Numéro inconnu",
+			"APP_PHONE_CALL_IGNORE": "Ignorer",
+			"APP_BANK_TITLE": "Banque",
+			"APP_BOURSE_TITLE": "Bourse",
+			"APP_CONTACT_TITLE": "Contacts",
+			"APP_CONTACT_NEW": "Nouveau contact",
+			"APP_CONTACT_EDIT": "Modifier le contact",
+			"APP_CONTACT_SAVE": "Enregistrer",
+			"APP_CONTACT_CANCEL": "Annuler",
+			"APP_CONTACT_DELETE": "Supprimer",
+			"APP_CONTACT_LABEL_NAME": "Nom",
+			"APP_CONTACT_LABEL_NUMBER": "Numéro",
+			"APP_MESSAGE_TITLE": "Messages",
+			"APP_MESSAGE_NEW_MESSAGE": "Nouveau message",
+			"APP_MESSAGE_ERASE_CONVERSATION": "Supprimer la conversation",
+			"APP_MESSAGE_ERASE_ALL_CONVERSATIONS": "Supprimer toutes les conversations.",
+			"APP_MESSAGE_SEND_GPS": "Envoyer la position GPS",
+			"APP_MESSAGE_SEND_PHOTO": "Télécharger l'image",
+			"APP_MESSAGE_SET_GPS": "Position GPS",
+			"APP_MESSAGE_ZOOM_IMG": "Zoom",
+			"APP_MESSAGE_DELETE": "Supprimer",
+			"APP_MESSAGE_MESS_NUMBER": "Numéro",
+			"APP_MESSAGE_MESS_SMS": "MESSAGE",
+			"APP_MESSAGE_MESS_CALL": "Répondre",
+			"APP_MESSAGE_MESS_COPY": "Copier",
+			"APP_MESSAGE_CONTACT_TITLE": "Contacts",
+			"APP_MESSAGE_CONTRACT_ENTER_NUMBER": "Entrez le numéro",
+			"APP_MESSAGE_PLACEHOLDER_ENTER_MESSAGE": "Envoyer un message",
+			"APP_DARKTCHAT_TITLE": "Chat sombre",
+			"APP_DARKTCHAT_NEW_CHANNEL": "Ajouter une chaîne",
+			"APP_DARKTCHAT_DELETE_CHANNEL": "Supprimer la chaîne",
+			"APP_DARKTCHAT_CANCEL": "Annuler",
+			"APP_DARKTCHAT_PLACEHOLDER_ENTER_MESSAGE": "Entrer le message",
+			"APP_TWITTER_NEW_ACCOUNT_USERNAME": "Nom d'utilisateur (> = 4)",
+			"APP_TWITTER_NEW_ACCOUNT_PASSWORD": "Mot de passe (> = 6)",
+			"APP_TWITTER_NEW_ACCOUNT_PASSWORD_CONFIRM": "Confirmer le mot de passe",
+			"APP_TWITTER_NEW_ACCOUNT_AVATAR": "URL de l'image de profil",
+			"APP_TWITTER_PLACEHOLDER_MESSAGE": "Et vous?",
+			"APP_TWITTER_BUTTON_ACTION_TWEETER": "Tweeter",
+			"APP_TWITTER_ACCOUNT_LOGIN": "Se connecter",
+			"APP_TWITTER_ACCOUNT_LOGOUT": "Déconnecter",
+			"APP_TWITTER_ACCOUNT_PARAM": "Mon compte",
+			"APP_TWITTER_ACCOUNT_AVATAR": "Modifier l'avatar",
+			"APP_TWITTER_ACCOUNT_CHANGE_PASSWORD": "Modifier le mot de passe",
+			"APP_TWITTER_ACCOUNT_NEW": "Nouveau compte",
+			"APP_TWIITER_ACCOUNT_SAVE": "Inscription",
+			"APP_TWIITER_ACCOUNT_CREATE": "Créer un compte",
+			"APP_TWIITER_ACCOUNT_CANCEL": "Annuler",
+			"APP_TWITTER_ACCOUNT_USERNAME": "Nom d'utilisateur",
+			"APP_TWITTER_ACCOUNT_PASSWORD": "Mot de passe",
+			"APP_TWITTER_NOTIFICATION": "Notification",
+			"APP_TWITTER_NOTIFICATION_WHEN": "Notifications",
+			"APP_TWITTER_NOTIFICATION_ALL": "Notifications",
+			"APP_TWITTER_NOTIFICATION_MENTION": "Mémoires",
+			"APP_TWITTER_NOTIFICATION_NEVER": "Désactiver les notifications",
+			"APP_TWITTER_NOTIFICATION_SOUND": "Son",
+			"APP_TWITTER_NOTIFICATION_SOUND_YES": "Oui",
+			"APP_TWITTER_NOTIFICATION_SOUND_NO": "Non",
+			"APP_TWITTER_NOTIF_ACCOUNT_CREATE_SUCCESS": "Votre compte Twitter a été créé",
+			"APP_TWITTER_NOTIF_ACCOUNT_CREATE_ERROR": "Votre compte Twitter n'a pas été créé car (le nom d'utilisateur existe déjà)",
+			"APP_TWITTER_NOTIF_LOGIN_SUCCESS": "Vous êtes correctement connecté à Twitter",
+			"APP_TWITTER_NOTIF_LOGIN_ERROR": "Nom d'utilisateur / mot de passe incorrect",
+			"APP_TWITTER_NOTIF_AVATAR_SUCCESS": "Votre avatar a bien été modifié",
+			"APP_TWITTER_NOTIF_NEW_PASSWORD_SUCCESS": "Vous avez changé votre mot de passe",
+			"APP_TWITTER_NOTIF_NEW_PASSWORD_ERROR": "Oups ... votre mot de passe ne peut pas être modifié",
+			"APP_TWITTER_NOTIF_NEW_PASSWORD_MISS_MATCH": "Le mot de passe ne correspond pas",
+			"APP_TWITTER_NOTIF_NEW_PASSWORD_LENGTH_ERROR": "Mot de passe trop court",
+			"APP_TWITTER_NAME": "Twitter",
+			"APP_TWITTER_VIEW_TWITTER": "Twitter",
+			"APP_TWITTER_VIEW_TOP_TWEETS": "Tweets récents",
+			"APP_TWITTER_VIEW_TWEETER": "Tweeter",
+			"APP_TWITTER_VIEW_SETTING": "Paramètres",
+			"APP_TWITTER_LIKEISLIKE": "J'aime / Contrairement",
+			"APP_TWITTER_RETWETTER": "Retweet",
+			"APP_INSTAGRAM_NAME": "Instagram",
+			"APP_MARKET_HEADER": "Boutique",
+			"APP_INSTAGRAM_POST": "Commentaire",
+			"APP_INSTAGRAM_NEW_ACCOUNT_FORENAME": "Nom",
+			"APP_INSTAGRAM_NEW_ACCOUNT_SURNAME": "Nom de famille",
+			"APP_INSTAGRAM_NEW_ACCOUNT_USERNAME": "Nom d'utilisateur (> = 4)",
+			"APP_INSTAGRAM_NEW_ACCOUNT_PASSWORD": "Mot de passe (> = 6)",
+			"APP_INSTAGRAM_NEW_ACCOUNT_PASSWORD_CONFIRM": "Confirmer le mot de passe",
+			"APP_INSTAGRAM_NEW_ACCOUNT_AVATAR": "Image de profil",
+			"APP_INSTAGRAM_ACCOUNT_LOGIN": "Connexion",
+			"APP_INSTAGRAM_ACCOUNT_LOGOUT": "Déconnexion",
+			"APP_INSTAGRAM_ACCOUNT_PARAM": "Paramètres",
+			"APP_INSTAGRAM_ACCOUNT_AVATAR": "Modifier l'avatar",
+			"APP_INSTAGRAM_ACCOUNT_CHANGE_PASSWORD": "Modifier le mot de passe",
+			"APP_INSTAGRAM_ACCOUNT_NEW": "Nouveau compte",
+			"APP_INSTAGRAM_ACCOUNT_USERNAME": "Nom d'utilisateur",
+			"APP_INSTAGRAM_ACCOUNT_PASSWORD": "Mot de passe",
+			"APP_INSTAGRAM_NOTIFICATION": "Notifications",
+			"APP_INSTAGRAM_NOTIFICATION_WHEN": "Quelques notifications",
+			"APP_INSTAGRAM_NOTIFICATION_ALL": "Toutes les notifications",
+			"APP_INSTAGRAM_NOTIFICATION_NEVER": "Désactiver les notifications",
+			"APP_INSTAGRAM_NOTIFICATION_SOUND": "Son",
+			"APP_INSTAGRAM_NOTIFICATION_SOUND_YES": "Oui",
+			"APP_INSTAGRAM_NOTIFICATION_SOUND_NO": "Non",
+			"APP_INSTAGRAM_NOTIF_ACCOUNT_CREATE_SUCCESS": "Vous avez réussi à créer votre profil Instagram",
+			"APP_INSTAGRAM_NOTIF_ACCOUNT_CREATE_ERROR": "Votre profil Instagram n'a pas été créé, (le nom d'utilisateur existe déjà)",
+			"APP_INSTAGRAM_NOTIF_LOGIN_SUCCESS": "Vous êtes correctement connecté à Instagram",
+			"APP_INSTAGRAM_NOTIF_LOGIN_ERROR": "Nom d'utilisateur / mot de passe incorrect",
+			"APP_INSTAGRAM_NOTIF_AVATAR_SUCCESS": "Votre avatar a bien été modifié",
+			"APP_INSTAGRAM_NOTIF_NEW_PASSWORD_SUCCESS": "Vous avez changé votre mot de passe",
+			"APP_INSTAGRAM_NOTIF_NEW_PASSWORD_ERROR": "Oups ... votre mot de passe ne peut pas être modifié",
+			"APP_INSTAGRAM_NOTIF_NEW_PASSWORD_MISS_MATCH": "Le mot de passe ne correspond pas",
+			"APP_INSTAGRAM_NOTIF_NEW_PASSWORD_LENGTH_ERROR": "Mot de passe trop court",
+			"APP_INSTAGRAM_CANCEL": "Annuler",
+			"APP_INSTAGRAM_NEXT": "Suivant",
+			"APP_INSTAGRAM_SHARE": "Partager",
+			"APP_BANK_TRANSFER": "COMPTE",
+			"APP_REDDIT_HEADER": "Reddit",
+			"APP_CONFIG_RINGTONE": "Sonnerie",
+			"APP_BANK_YOU": "Envoyer de l'argent à quelqu'un",
+			"APP_BANK_YOUID": "ID de personne",
+			"APP_BANK_BALANCE": "Entrer le montant",
+			"APP_BANK_SUMBIT": "Confirmer",
+			"APP_FATURA_HEADER": "COMPTES",
+			"APP_FATURA_PAY": "Paiement de factures",
+			"APP_HABERLER_HEADER": "Actualités",
+			"APP_HABERLER_HEADER_DETAIL": "Lire l'actualité",
+			"APP_YELLOW_HEADER": "ADS",
+			"APP_MARKET_PAY": "Payer",
+			"APP_APP_FOV": "Retour",
+			"APP_APP_ANNO": "Annuler",
+			  "TIMEAGO": [
+				"à l'instant",
+				["il y a %s seconde", "il y a %s secondes"],
+				["il y a %s minute", "il y a %s minutes"],
+				["il y a %s heure", "il y a %s heures"],
+				["il y a %s jour", "il y a %s jours"],
+				["il y a %s semaine", "il y a %s semaines"],
+				["il y a %s mois", "il y a %s mois"],
+				["il y a %s an", "il y a %s ans"]
+			  ]
+        },
+        "tr_TR": {
+            "NAME": "Türkçe",
+            "PHONE_WARNING_MESSAGE": "Mesaj Kutusu Dolu !",
+            "PHONE_WARNING_MESSAGE_MESS": "Mesajlar",
+            "CONFIRM": "Onayla",
+            "CANCEL": "İptal",
+            "APP_CONFIG_TITLE": "Ayarlar",
+            "APP_CONFIG_MY_MUNBER": "Numaram",
+            "APP_CONFIG_WALLPAPER": "Duvar Kağıdı",
+            "APP_CONFIG_CASE": "Telefon",
+            "APP_CONFIG_ZOOM": "Zoom",
+            "APP_CONFIG_VOLUME": "Ses Seviyesi",
+            "APP_CONFIG_LANGUAGE": "Dil",
+            "APP_CONFIG_MOUSE_SUPPORT": "Mouse Ayarı",
+            "APP_CONFIG_RESET": "Format At",
+            "APP_CONFIG_RESET_CONFIRM": "Format Atmayı Onayla",
+            "APP_PHONE_CALL": "Çağrı",
+            "APP_PHONE_CALL_ANONYMOUS": "Gizli Arama",
+            "APP_PHONE_DELETE": "Sil",
+            "APP_PHONE_DELETE_ALL": "Hepsini Sil.",
+            "APP_PHONE_TITLE": "Telefon",
+            "APP_PHONE_MENU_FAVORITES": "Favoriler",
+            "APP_PHONE_MENU_RECENTS": "Son Aranan Kişiler",
+            "APP_PHONE_MENU_CONTACTS": "Rehber",
+            "APP_PHONE_ENTER_NUMBER": "Numara Girin",
+            "APP_PHONE_NUMBER_HIDDEN": "Gizli Numara",
+            "APP_PHONE_NUMBER_UNKNOWN": "Bilinmiyor",
+            "APP_PHONE_CALL_IGNORE": "Yoksay",
+            "APP_BANK_TITLE": "Banka",
+            "APP_BOURSE_TITLE": "Borsa",
+            "APP_CONTACT_TITLE": "Rehber",
+            "APP_CONTACT_NEW": "Kişi Ekle",
+            "APP_CONTACT_EDIT": "Kişiyi Güncelle",
+            "APP_CONTACT_SAVE": "Kaydet",
+            "APP_CONTACT_CANCEL": "İptal Et",
+            "APP_CONTACT_DELETE": "Sil",
+            "APP_CONTACT_LABEL_NAME": "Kişinin Adı",
+            "APP_CONTACT_LABEL_NUMBER": "Numara",
+            "APP_MESSAGE_TITLE": "Mesajlar",
+            "APP_MESSAGE_NEW_MESSAGE": "Yeni Mesaj",
+            "APP_MESSAGE_ERASE_CONVERSATION": "Konuşmayı Sil",
+            "APP_MESSAGE_ERASE_ALL_CONVERSATIONS": "Tüm Konuşmaları Sil",
+            "APP_MESSAGE_SEND_GPS": "GPS Koordinatı Gönder",
+            "APP_MESSAGE_SET_GPS": "GPS'e Ayarla",
+            "APP_MESSAGE_SEND_PHOTO": "Fotoğraf gönder",
+            "APP_MESSAGE_ZOOM_IMG": "Zoom",
+            "APP_MESSAGE_DELETE": "Sil",
+            "APP_MESSAGE_MESS_NUMBER": "Numara ",
+            "APP_MESSAGE_MESS_SMS": "SMS",
+            "APP_MESSAGE_MESS_CALL": "Ara",
+            "APP_MESSAGE_MESS_COPY": "Mesajı Kopyala",
+            "APP_MESSAGE_CONTACT_TITLE": "Rehber",
+            "APP_MESSAGE_CONTRACT_ENTER_NUMBER": "Numara Gir",
+            "APP_MESSAGE_PLACEHOLDER_ENTER_MESSAGE": "Mesajı Yaz",
+            "APP_DARKTCHAT_TITLE": "Dark Chat",
+            "APP_DARKTCHAT_NEW_CHANNEL": "Yeni Konuşma Başlat",
+            "APP_DARKTCHAT_DELETE_CHANNEL": "Konuşmayı Sil",
+            "APP_DARKTCHAT_CANCEL": "İptal",
+            "APP_DARKTCHAT_PLACEHOLDER_ENTER_MESSAGE": "Mesajı Gir",
+            "APP_TWITTER_NAME": "Twitter",
+            "APP_TWITTER_VIEW_TWITTER": "Twitter",
+            "APP_TWITTER_VIEW_TOP_TWEETS": "En İyi Tweetler",
+            "APP_TWITTER_VIEW_TWEETER": "Tweetler",
+            "APP_TWITTER_VIEW_SETTING": "Ayarlar",
+            "APP_TWITTER_NEW_ACCOUNT_USERNAME": "Kullanıcı Adı (>= 4)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD": "Şifre (>= 6)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD_CONFIRM": "Şifreyi Onayla",
+            "APP_TWITTER_NEW_ACCOUNT_AVATAR": "Profil resmini değiştir",
+            "APP_TWITTER_PLACEHOLDER_MESSAGE": "Bugün ne düşünüyorsun?",
+            "APP_TWITTER_BUTTON_ACTION_TWEETER": "Tweet At",
+            "APP_TWITTER_ACCOUNT_LOGIN": "Giriş Yap",
+            "APP_TWITTER_ACCOUNT_LOGOUT": "Çıkış Yap",
+            "APP_TWITTER_ACCOUNT_PARAM": "Hesabım",
+            "APP_TWITTER_ACCOUNT_AVATAR": "Profil Fotoğrafını Değiştir",
+            "APP_TWITTER_ACCOUNT_CHANGE_PASSWORD": "Şifreyi Değiştir",
+            "APP_TWITTER_ACCOUNT_NEW": "Yeni Hesap Oluştur",
+            "APP_TWIITER_ACCOUNT_SAVE": "Kayıt Ol",
+            "APP_TWIITER_ACCOUNT_CREATE": "Yeni Hesap Oluştur",
+            "APP_TWIITER_ACCOUNT_CANCEL": "İptal",
+            "APP_TWITTER_ACCOUNT_USERNAME": "Kullanıcı adı",
+            "APP_TWITTER_ACCOUNT_PASSWORD": "Şifre",
+            "APP_TWITTER_NOTIFICATION": "Bildirim",
+            "APP_TWITTER_NOTIFICATION_WHEN": "Ne zaman bildirim gelsin?",
+            "APP_TWITTER_NOTIFICATION_ALL": "Bütün tweetler",
+            "APP_TWITTER_NOTIFICATION_MENTION": "Sadece bahsetmeler",
+            "APP_TWITTER_NOTIFICATION_NEVER": "Kimse",
+            "APP_TWITTER_NOTIFICATION_SOUND": "Tweet geldiğinde ses calsın mı?",
+            "APP_TWITTER_NOTIFICATION_SOUND_YES": "Evet",
+            "APP_TWITTER_NOTIFICATION_SOUND_NO": "Hayır",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_SUCCESS": "Twitter hesabınız oluşturuldu.",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_ERROR": "Twitter hesabınız oluşturulamadı (Kullanıcı adı zaten kullanımda?)",
+            "APP_TWITTER_NOTIF_LOGIN_SUCCESS": "Twitter'a bağlandın.",
+            "APP_TWITTER_NOTIF_LOGIN_ERROR": "Hatalı kullanıcı adı / şifre",
+            "APP_TWITTER_NOTIF_AVATAR_SUCCESS": "Profil resmin değiştirildi!",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_SUCCESS": "Şifren değiştirildi.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_ERROR": "Oops.... Şifren değiştirilemedi.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_MISS_MATCH": "Şifre uyuşmuyor",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_LENGTH_ERROR": "Şifre cok kısa",
+            "APP_TWITTER_LIKEISLIKE": "Beğen / Beğeni Kaldır",
+            "APP_TWITTER_RETWETTER": "Retweet",
+            "APP_INSTAGRAM_NAME": "Instagram",
+            "APP_INSTAGRAM_POST": "Yorum Yazın..",
+            "APP_INSTAGRAM_NEW_ACCOUNT_FORENAME": "Adınız",
+            "APP_INSTAGRAM_NEW_ACCOUNT_SURNAME": "Soyadınız",
+            "APP_INSTAGRAM_NEW_ACCOUNT_USERNAME": "Kullanıcı Adınız (>= 4)",
+            "APP_INSTAGRAM_NEW_ACCOUNT_PASSWORD": "Şifre (>= 6)",
+            "APP_INSTAGRAM_NEW_ACCOUNT_PASSWORD_CONFIRM": "Şifreyi Onayla",
+            "APP_INSTAGRAM_NEW_ACCOUNT_AVATAR": "Profil resmini değiştir",
+            "APP_INSTAGRAM_ACCOUNT_LOGIN": "Giriş Yap",
+            "APP_INSTAGRAM_ACCOUNT_LOGOUT": "Çıkış Yap",
+            "APP_INSTAGRAM_ACCOUNT_PARAM": "Hesabım",
+            "APP_INSTAGRAM_ACCOUNT_AVATAR": "Profil Fotoğrafını Değiştir",
+            "APP_INSTAGRAM_ACCOUNT_CHANGE_PASSWORD": "Şifreyi Değiştir",
+            "APP_INSTAGRAM_ACCOUNT_NEW": "Yeni Hesap Oluştur",
+            "APP_INSTAGRAM_ACCOUNT_USERNAME": "Kullanıcı adı",
+            "APP_INSTAGRAM_ACCOUNT_PASSWORD": "Şifre",
+            "APP_INSTAGRAM_NOTIFICATION": "Bildirim",
+            "APP_INSTAGRAM_NOTIFICATION_WHEN": "Ne zaman bildirim gelsin?",
+            "APP_INSTAGRAM_NOTIFICATION_ALL": "Bütün Postlarda",
+            "APP_INSTAGRAM_NOTIFICATION_NEVER": "Hiç bir zaman",
+            "APP_INSTAGRAM_NOTIFICATION_SOUND": "Post geldiğinde ses calsın mı?",
+            "APP_INSTAGRAM_NOTIFICATION_SOUND_YES": "Evet",
+            "APP_INSTAGRAM_NOTIFICATION_SOUND_NO": "Hayır",
+            "APP_INSTAGRAM_NOTIF_ACCOUNT_CREATE_SUCCESS": "Instagram hesabınız oluşturuldu.",
+            "APP_INSTAGRAM_NOTIF_ACCOUNT_CREATE_ERROR": "Instagram hesabınız oluşturulamadı (Kullanıcı adı zaten kullanımda?)",
+            "APP_INSTAGRAM_NOTIF_LOGIN_SUCCESS": "Instagram'a bağlandın.",
+            "APP_INSTAGRAM_NOTIF_LOGIN_ERROR": "Hatalı kullanıcı adı / şifre",
+            "APP_INSTAGRAM_NOTIF_AVATAR_SUCCESS": "Profil resmin değiştirildi!",
+            "APP_INSTAGRAM_NOTIF_NEW_PASSWORD_SUCCESS": "Şifren değiştirildi.",
+            "APP_INSTAGRAM_NOTIF_NEW_PASSWORD_ERROR": "Oops.... Şifren değiştirilemedi.",
+            "APP_INSTAGRAM_NOTIF_NEW_PASSWORD_MISS_MATCH": "Şifre uyuşmuyor",
+            "APP_INSTAGRAM_NOTIF_NEW_PASSWORD_LENGTH_ERROR": "Şifre cok kısa",
+            "APP_INSTAGRAM_CANCEL": "İptal",
+            "APP_INSTAGRAM_NEXT": "Devam",
+            "APP_INSTAGRAM_SHARE": "Paylaş",
+            "APP_BANK_TRANSFER": "TRANSFER",
+            "APP_BANK_YOU": "Paranızı Başka Birine Aktarın",
+            "APP_BANK_YOUID": "Göndericeğiniz Kişinin ID",
+            "APP_BANK_BALANCE": "Göndermek İstediğiniz Miktarı Girin",
+            "APP_BANK_SUMBIT": "Gönder",
+            "APP_FATURA_HEADER": "FATURALAR",
+            "APP_FATURA_PAY": "Fatura Ödeme",
+            "APP_YELLOW_HEADER": "YELLOWPAGES",
+            "APP_APP_FOV": "Geri",
+            "APP_APP_ANNO": "Geri",
+            "APP_YELLOW_NOTIFICATION_WHEN": "Ne zaman bildirim gelsin?",
+            "APP_YELLOW_NOTIFICATION_ALL": "Bütün Mesajlar",
+            "APP_YELLOW_NOTIFICATION_NEVER": "Hiç Bir Zaman",
+            "APP_YELLOW_NOTIFICATION_SOUND": "Post geldiğinde ses calsın mı?",
+            "APP_YELLOW_NOTIFICATION_SOUND_YES": "Evet",
+            "APP_YELLOW_NOTIFICATION_SOUND_NO": "Hayır",
+            "APP_HABERLER_HEADER": "Haberler",
+            "APP_HABERLER_HEADER_DETAIL": "Haberin Detayı",
+            "APP_MARKET_HEADER": "Market",
+            "APP_CONFIG_RINGTONE": "Zil Sesi",
+            "APP_MARKET_PAY": "Satın Al",
+            "APP_REDDIT_HEADER": "Reddit",
+            "APP_TWITTER_REPLY": "Cevapla",
+            "TIMEAGO": [
+                "Şimdi",
+                [
+                    "%s Saniye önce",
+                    "%s Saniye önce"
+                ],
+                [
+                    "%s Dakika önce",
+                    "%s Dakika önce"
+                ],
+                [
+                    "%s Saat önce",
+                    "%s Saat önce"
+                ],
+                [
+                    "%s Gün önce",
+                    "%s Gün önce"
+                ],
+                [
+                    "%s Hafta önce",
+                    "%s Hafta önce"
+                ],
+                [
+                    "%s Ay önce",
+                    "%s Ay önce"
+                ],
+                [
+                    "%s Yıl önce",
+                    "%s Yıl önce"
+                ]
+            ]
+        },
+        "en_US": {
+            "NAME": "English",
+            "PHONE_WARNING_MESSAGE": "memento",
+            "PHONE_WARNING_MESSAGE_MESS": "news",
+            "CONFIRM": "Accept",
+            "CANCEL": "abort",
+            "APP_MESSAGE_SEND_PHOTO": "Send a Photo",
+            "APP_CONFIG_TITLE": "parameter",
+            "APP_CONFIG_MY_MUNBER": "My number",
+            "APP_CONFIG_WALLPAPER": "wallpaper",
+            "APP_CONFIG_CASE": "telephone cover",
+            "APP_CONFIG_ZOOM": "zoom",
+            "APP_CONFIG_VOLUME": "volume",
+            "APP_CONFIG_LANGUAGE": "Language",
+            "APP_CONFIG_MOUSE_SUPPORT": "Mouse control",
+            "APP_CONFIG_RESET": "format",
+            "APP_CONFIG_RESET_CONFIRM": "DELETE ALL",
+            "APP_PHONE_CALL": "call",
+            "APP_PHONE_CALL_ANONYMOUS": "Anonymous Call",
+            "APP_PHONE_DELETE": "Delete",
+            "APP_PHONE_DELETE_ALL": "Delete all.",
+            "APP_PHONE_TITLE": "Telephone number",
+            "APP_PHONE_MENU_FAVORITES": "favourites",
+            "APP_PHONE_MENU_RECENTS": "Newest",
+            "APP_PHONE_MENU_CONTACTS": "contacts",
+            "APP_PHONE_ENTER_NUMBER": "Enter a number",
+            "APP_BANK_TITLE": "bench",
+            "APP_BOURSE_TITLE": "stock exchange",
+            "APP_CONTACT_TITLE": "contact details",
+            "APP_CONTACT_NEW": "New contact",
+            "APP_CONTACT_EDIT": "Change the contact",
+            "APP_CONTACT_SAVE": "registration",
+            "APP_CONTACT_CANCEL": "abort",
+            "APP_CONTACT_DELETE": "Delete",
+            "APP_CONTACT_LABEL_NAME": "First name - Last name",
+            "APP_CONTACT_LABEL_NUMBER": "number",
+            "APP_MESSAGE_TITLE": "news",
+            "APP_MESSAGE_NEW_MESSAGE": "New Message",
+            "APP_MESSAGE_ERASE_CONVERSATION": "Delete the call",
+            "APP_MESSAGE_ERASE_ALL_CONVERSATIONS": "Delete all conv.",
+            "APP_MESSAGE_SEND_GPS": "Send GPS coupling",
+            "APP_MESSAGE_SET_GPS": "GPS position",
+            "APP_MESSAGE_ZOOM_IMG": "Enlarge",
+            "APP_MESSAGE_DELETE": "Delete",
+            "APP_MESSAGE_SMS": "text message",
+            "APP_MESSAGE_MESS_NUMBER": "Number ",
+            "APP_MESSAGE_CONTACT_TITLE": "contacts",
+            "APP_MESSAGE_CONTRACT_ENTER_NUMBER": "Enter a number",
+            "APP_MESSAGE_PLACEHOLDER_ENTER_MESSAGE": "Send a message",
+            "APP_DARKTCHAT_TITLE": "Dark Chat",
+            "APP_DARKTCHAT_NEW_CHANNEL": "Add a channel",
+            "APP_DARKTCHAT_DELETE_CHANNEL": "Delete the channel",
+            "APP_DARKTCHAT_CANCEL": "abort",
+            "APP_DARKTCHAT_PLACEHOLDER_ENTER_MESSAGE": "Enter a message",
+            "APP_TWITTER_NAME": "Twitter",
+            "APP_TWITTER_VIEW_TWITTER": "Twitter",
+            "APP_TWITTER_VIEW_TOP_TWEETS": "top tweets",
+            "APP_TWITTER_VIEW_TWEETER": "tweets",
+            "APP_TWITTER_VIEW_SETTING": "parameter",
+            "APP_TWITTER_NEW_ACCOUNT_USERNAME": "Username (>= 4)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD": "Password (>= 6)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD_CONFIRM": "Confirm password",
+            "APP_TWITTER_NEW_ACCOUNT_AVATAR": "URL of your avatar",
+            "APP_TWITTER_PLACEHOLDER_MESSAGE": "What's the matter with you?",
+            "APP_TWITTER_BUTTON_ACTION_TWEETER": "Tweeter",
+            "APP_TWITTER_ACCOUNT_LOGIN": "Log in to the website",
+            "APP_TWITTER_ACCOUNT_LOGOUT": "Disconnect from location",
+            "APP_TWITTER_ACCOUNT_PARAM": "My account",
+            "APP_TWITTER_ACCOUNT_AVATAR": "Changing the Avatar",
+            "APP_TWITTER_ACCOUNT_CHANGE_PASSWORD": "Change password",
+            "APP_TWITTER_ACCOUNT_NEW": "New account",
+            "APP_TWIITER_ACCOUNT_SAVE": "registration",
+            "APP_TWIITER_ACCOUNT_CREATE": "Create the account",
+            "APP_TWIITER_ACCOUNT_CANCEL": "abort",
+            "APP_TWITTER_ACCOUNT_USERNAME": "username",
+            "APP_TWITTER_ACCOUNT_PASSWORD": "password",
+            "APP_TWITTER_NOTIFICATION": "notification",
+            "APP_TWITTER_NOTIFICATION_WHEN": "To be notified",
+            "APP_TWITTER_NOTIFICATION_ALL": "All News",
+            "APP_TWITTER_NOTIFICATION_MENTION": "Just mention",
+            "APP_TWITTER_NOTIFICATION_NEVER": "Nobody",
+            "APP_TWITTER_NOTIFICATION_SOUND": "Play a sound",
+            "APP_TWITTER_NOTIFICATION_SOUND_YES": "Yes",
+            "APP_TWITTER_NOTIFICATION_SOUND_NO": "No",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_SUCCESS": "Your Twitter account has been created.",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_ERROR": "Your Twitter account could not be created (username already used?)",
+            "APP_TWITTER_NOTIF_LOGIN_SUCCESS": "You are connected to Twitter.",
+            "APP_TWITTER_NOTIF_LOGIN_ERROR": "Invalid account / passwords",
+            "APP_TWITTER_NOTIF_AVATAR_SUCCESS": "Your avatar has been changed!",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_SUCCESS": "Your password has been changed.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_ERROR": "Oops.... Your password could not be changed.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_MISS_MATCH": "Passwords do not match",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_LENGTH_ERROR": "Password too short",
+            "APP_TWITTER_LIKEISLIKE": "Like / Like Remove",
+            "APP_TWITTER_RETWETTER": "Retweet",
+            "APP_INSTAGRAM_NAME": "Instagram",
+            "APP_INSTAGRAM_POST": "Add a comment",
+            "APP_INSTAGRAM_NEW_ACCOUNT_FORENAME": "Name",
+            "APP_INSTAGRAM_NEW_ACCOUNT_SURNAME": "Surname",
+            "APP_INSTAGRAM_NEW_ACCOUNT_USERNAME": "Username (>= 4)",
+            "APP_INSTAGRAM_NEW_ACCOUNT_PASSWORD": "Password (>= 6)",
+            "APP_INSTAGRAM_NEW_ACCOUNT_PASSWORD_CONFIRM": "Confirm password",
+            "APP_INSTAGRAM_NEW_ACCOUNT_AVATAR": "URL of your avatar",
+            "APP_INSTAGRAM_ACCOUNT_LOGIN": "Log in",
+            "APP_INSTAGRAM_ACCOUNT_LOGOUT": "Disconnect",
+            "APP_INSTAGRAM_ACCOUNT_PARAM": "My account",
+            "APP_INSTAGRAM_ACCOUNT_AVATAR": "Changing the Avatar",
+            "APP_INSTAGRAM_ACCOUNT_CHANGE_PASSWORD": "Change password",
+            "APP_INSTAGRAM_ACCOUNT_NEW": "New account",
+            "APP_INSTAGRAM_ACCOUNT_USERNAME": "username",
+            "APP_INSTAGRAM_ACCOUNT_PASSWORD": "password",
+            "APP_INSTAGRAM_NOTIFICATION": "notification",
+            "APP_INSTAGRAM_NOTIFICATION_WHEN": "To be notified",
+            "APP_INSTAGRAM_NOTIFICATION_ALL": "All News",
+            "APP_INSTAGRAM_NOTIFICATION_NEVER": "Nobody",
+            "APP_INSTAGRAM_NOTIFICATION_SOUND": "Play a sound",
+            "APP_INSTAGRAM_NOTIFICATION_SOUND_YES": "Yes",
+            "APP_INSTAGRAM_NOTIFICATION_SOUND_NO": "No",
+            "APP_INSTAGRAM_NOTIF_ACCOUNT_CREATE_SUCCESS": "Your Instagram account has been created.",
+            "APP_INSTAGRAM_NOTIF_ACCOUNT_CREATE_ERROR": "Your Instagram account could not be created (username already used?)",
+            "APP_INSTAGRAM_NOTIF_LOGIN_SUCCESS": "You are connected to Instagram.",
+            "APP_INSTAGRAM_NOTIF_LOGIN_ERROR": "Invalid account / passwords",
+            "APP_INSTAGRAM_NOTIF_AVATAR_SUCCESS": "Your avatar has been changed!",
+            "APP_INSTAGRAM_NOTIF_NEW_PASSWORD_SUCCESS": "Your password has been changed.",
+            "APP_INSTAGRAM_NOTIF_NEW_PASSWORD_ERROR": "Oops.... Your password could not be changed.",
+            "APP_INSTAGRAM_NOTIF_NEW_PASSWORD_MISS_MATCH": "Passwords do not match",
+            "APP_INSTAGRAM_NOTIF_NEW_PASSWORD_LENGTH_ERROR": "Password too short",
+            "APP_INSTAGRAM_CANCEL": "Cancel",
+            "APP_INSTAGRAM_NEXT": "Next",
+            "APP_INSTAGRAM_SHARE": "Share",
+            "APP_BANK_TRANSFER": "TRANSFER",
+            "APP_BANK_YOU": "Transfer Your Money to Another Person",
+            "APP_BANK_YOUID": "ID of Contact",
+            "APP_BANK_BALANCE": "Enter the amount you want to send",
+            "APP_BANK_SUMBIT": "Sumbit",
+            "APP_FATURA_HEADER": "BILLING",
+            "APP_FATURA_PAY": "Bill Pay",
+            "APP_YELLOW_HEADER": "YELLOWPAGES",
+            "APP_APP_FOV": "Return",
+            "APP_APP_ANNO": "Annuler",
+            "APP_YELLOW_NOTIFICATION_WHEN": "To be notified",
+            "APP_YELLOW_NOTIFICATION_ALL": "All News",
+            "APP_YELLOW_NOTIFICATION_NEVER": "Nobody",
+            "APP_YELLOW_NOTIFICATION_SOUND": "Play a sound",
+            "APP_YELLOW_NOTIFICATION_SOUND_YES": "Yes",
+            "APP_YELLOW_NOTIFICATION_SOUND_NO": "No",
+            "APP_HABERLER_HEADER": "News",
+            "APP_HABERLER_HEADER_DETAIL": "News Detail",
+            "APP_MARKET_HEADER": "Market",
+            "APP_CONFIG_RINGTONE": "Ring tone",
+            "APP_MARKET_PAY": "Buy",
+            "APP_REDDIT_HEADER": "Reddit",
+            "APP_TWITTER_REPLY": "Reply",
+            "TIMEAGO": [
+                "just now",
+                [
+                    "%s second ago",
+                    "%s seconds ago"
+                ],
+                [
+                    "%s minute ago",
+                    "%s minutes ago"
+                ],
+                [
+                    "%s hour ago",
+                    "%s hours ago"
+                ],
+                [
+                    "%s day ago",
+                    "%s days ago"
+                ],
+                [
+                    "%s week ago",
+                    "%s weeks ago"
+                ],
+                [
+                    "%s month ago",
+                    "%s months ago"
+                ],
+                [
+                    "%s year ago",
+                    "%s years ago"
+                ]
+            ]
+        },
+        "de_DE": {
+            "NAME": "Deutsch",
+            "PHONE_WARNING_MESSAGE": "Achtung!",
+            "PHONE_WARNING_MESSAGE_MESS": "Nachrichten",
+            "CONFIRM": "Akzeptieren",
+            "CANCEL": "Abbrechen",
+            "APP_CONFIG_TITLE": "Einstellungen",
+            "APP_CONFIG_MY_MUNBER": "Meine Nummer",
+            "APP_CONFIG_WALLPAPER": "Hintergrundbild",
+            "APP_CONFIG_CASE": "Telefontyp",
+            "APP_CONFIG_ZOOM": "Grösse",
+            "APP_CONFIG_VOLUME": "Lautstärke",
+            "APP_CONFIG_LANGUAGE": "Sprache",
+            "APP_CONFIG_MOUSE_SUPPORT": "Maussteuerung",
+            "APP_CONFIG_RESET": "Werkseinstellungen",
+            "APP_CONFIG_RESET_CONFIRM": "Zurücksetzen",
+            "APP_PHONE_CALL": "Anrufen",
+            "APP_PHONE_DELETE": "Löschen",
+            "APP_PHONE_DELETE_ALL": "Alle löschen",
+            "APP_PHONE_TITLE": "Telefon",
+            "APP_PHONE_MENU_FAVORITES": "Favoriten",
+            "APP_PHONE_MENU_RECENTS": "Kürzlich",
+            "APP_PHONE_MENU_CONTACTS": "Kontakte",
+            "APP_PHONE_ENTER_NUMBER": "Nummer eingeben",
+            "APP_PHONE_NUMBER_HIDDEN": "Nummer unterdrückt",
+            "APP_PHONE_NUMBER_UNKNOWN": "Unbekannt",
+            "APP_PHONE_CALL_IGNORE": "Ignorieren",
+            "APP_BANK_TITLE": "Bank",
+            "APP_BOURSE_TITLE": "Börse",
+            "APP_CONTACT_TITLE": "Kontakt",
+            "APP_CONTACT_NEW": "Neuer Kontakt",
+            "APP_CONTACT_EDIT": "Kontakt bearbeiten",
+            "APP_CONTACT_SAVE": "Speichern",
+            "APP_CONTACT_CANCEL": "Abbrechen",
+            "APP_CONTACT_DELETE": "Löschen",
+            "APP_CONTACT_LABEL_NAME": "Vorname - Nachname",
+            "APP_CONTACT_LABEL_NUMBER": "Rufnummer",
+            "APP_MESSAGE_TITLE": "Nachrichten",
+            "APP_MESSAGE_NEW_MESSAGE": "Neue Nachricht",
+            "APP_MESSAGE_ERASE_CONVERSATION": "Konversation löschen",
+            "APP_MESSAGE_ERASE_ALL_CONVERSATIONS": "Alle Konversationen löschen",
+            "APP_MESSAGE_SEND_GPS": "GPS Position senden",
+            "APP_MESSAGE_SET_GPS": "Position als Ziel setzen",
+            "APP_MESSAGE_ZOOM_IMG": "Zoom",
+            "APP_MESSAGE_DELETE": "Löschen",
+            "APP_MESSAGE_MESS_NUMBER": "Nummer ",
+            "APP_MESSAGE_MESS_SMS": "SMS",
+            "APP_MESSAGE_MESS_CALL": "Anrufen",
+            "APP_MESSAGE_MESS_COPY": "Kopieren",
+            "APP_MESSAGE_CONTACT_TITLE": "Kontakte",
+            "APP_MESSAGE_CONTRACT_ENTER_NUMBER": "Eine Nummer eingeben",
+            "APP_MESSAGE_PLACEHOLDER_ENTER_MESSAGE": "Nachricht eingeben",
+            "APP_DARKTCHAT_TITLE": "Anonymer Chat",
+            "APP_DARKTCHAT_NEW_CHANNEL": "Neuen Channel erstellen",
+            "APP_DARKTCHAT_DELETE_CHANNEL": "Channel löschen",
+            "APP_DARKTCHAT_CANCEL": "Abbrechen",
+            "APP_DARKTCHAT_PLACEHOLDER_ENTER_MESSAGE": "Nachricht eingeben",
+            "APP_TWITTER_NAME": "Twitter",
+            "APP_TWITTER_VIEW_TWITTER": "Twitter",
+            "APP_TWITTER_VIEW_TOP_TWEETS": "Top Tweets",
+            "APP_TWITTER_VIEW_TWEETER": "Tweeter",
+            "APP_TWITTER_VIEW_SETTING": "Einstellungen",
+            "APP_TWITTER_NEW_ACCOUNT_USERNAME": "Benutzername (>= 4)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD": "Passwort (>= 6)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD_CONFIRM": "Passwort bestätigen",
+            "APP_TWITTER_NEW_ACCOUNT_AVATAR": "Avatar-URL",
+            "APP_TWITTER_PLACEHOLDER_MESSAGE": "Was gibts neues?",
+            "APP_TWITTER_BUTTON_ACTION_TWEETER": "Twittern",
+            "APP_TWITTER_ACCOUNT_LOGIN": "Einloggen",
+            "APP_TWITTER_ACCOUNT_LOGOUT": "Ausloggen",
+            "APP_TWITTER_ACCOUNT_PARAM": "Mein Account",
+            "APP_TWITTER_ACCOUNT_AVATAR": "Avatar ändern",
+            "APP_TWITTER_ACCOUNT_CHANGE_PASSWORD": "Passwort ändern",
+            "APP_TWITTER_ACCOUNT_NEW": "Neuer Account",
+            "APP_TWIITER_ACCOUNT_SAVE": "Registrieren",
+            "APP_TWIITER_ACCOUNT_CREATE": "Account erstellen",
+            "APP_TWIITER_ACCOUNT_CANCEL": "Abbrechen",
+            "APP_TWITTER_ACCOUNT_USERNAME": "Benutzername",
+            "APP_TWITTER_ACCOUNT_PASSWORD": "Passwort",
+            "APP_TWITTER_NOTIFICATION": "Notification",
+            "APP_TWITTER_NOTIFICATION_WHEN": "Benachrichtigungen",
+            "APP_TWITTER_NOTIFICATION_ALL": "Alle Nachrichten",
+            "APP_TWITTER_NOTIFICATION_MENTION": "Nachrichten mit Erwähnung",
+            "APP_TWITTER_NOTIFICATION_NEVER": "Niemals",
+            "APP_TWITTER_NOTIFICATION_SOUND": "Benachrichtigungston",
+            "APP_TWITTER_NOTIFICATION_SOUND_YES": "An",
+            "APP_TWITTER_NOTIFICATION_SOUND_NO": "Aus",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_SUCCESS": "Dein Twitter-Account wurde erstellt.",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_ERROR": "Dein Twitter-Account konnte nicht erstellt werden (Benutzername bereits verwendet?)",
+            "APP_TWITTER_NOTIF_LOGIN_SUCCESS": "Du hast dich erfolgreich eingeloggt.",
+            "APP_TWITTER_NOTIF_LOGIN_ERROR": "Ungültiges Konto / Passwort",
+            "APP_TWITTER_NOTIF_AVATAR_SUCCESS": "Dein Avatar wurde geändert.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_SUCCESS": "Dein Passwort wurde geändert.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_ERROR": "Ups.... dein Passwort konnte nicht geändert werden.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_MISS_MATCH": "Passwörter stimmen nicht überein",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_LENGTH_ERROR": "Passwort zu kurz",
+            "APP_APP_FOV": "Return",
+            "APP_APP_ANNO": "Annuler",
+            "TIMEAGO": [
+                "jetzt gerade",
+                [
+                    "vor %s Sekunde",
+                    "vor %s Sekunden"
+                ],
+                [
+                    "vor %s Minute",
+                    "vor %s Minuten"
+                ],
+                [
+                    "vor %s Stunde",
+                    "vor %s Stunden"
+                ],
+                [
+                    "vor %s Tag",
+                    "vor %s Tagen"
+                ],
+                [
+                    "vor %s Woche",
+                    "vor %s Wochen"
+                ],
+                [
+                    "vor %s Monat",
+                    "vor %s Monaten"
+                ],
+                [
+                    "vor %s Jahr",
+                    "vor %s Jahren"
+                ]
+            ]
+        },
+        "pl_PL": {
+            "NAME": "Polish",
+            "PHONE_WARNING_MESSAGE": "pamiątka",
+            "PHONE_WARNING_MESSAGE_MESS": "nowiny",
+            "CONFIRM": "Akceptacja",
+            "CANCEL": "przerwać",
+            "APP_CONFIG_TITLE": "parametr",
+            "APP_CONFIG_MY_MUNBER": "Mój numer",
+            "APP_CONFIG_WALLPAPER": "tapeta",
+            "APP_CONFIG_CASE": "Pokrywa telefoniczna",
+            "APP_CONFIG_ZOOM": "przybliżanie",
+            "APP_CONFIG_VOLUME": "objętość",
+            "APP_CONFIG_LANGUAGE": "Język",
+            "APP_CONFIG_RESET": "format",
+            "APP_CONFIG_RESET_CONFIRM": "DELETE ALL",
+            "APP_PHONE_CALL": "rozmowa telefoniczna",
+            "APP_PHONE_DELETE": "Usuń",
+            "APP_PHONE_DELETE_ALL": "Usuń wszystko.",
+            "APP_PHONE_TITLE": "Numer telefonu",
+            "APP_PHONE_MENU_FAVORITES": "ulubione",
+            "APP_PHONE_MENU_RECENTS": "Najnowszy",
+            "APP_PHONE_MENU_CONTACTS": "styki",
+            "APP_PHONE_ENTER_NUMBER": "Wprowadź numer",
+            "APP_BANK_TITLE": "ławka",
+            "APP_BOURSE_TITLE": "giełda",
+            "APP_CONTACT_TITLE": "dane kontaktowe",
+            "APP_CONTACT_NEW": "Nowy kontakt",
+            "APP_CONTACT_EDIT": "Zmień kontakt",
+            "APP_CONTACT_SAVE": "zameldowanie",
+            "APP_CONTACT_CANCEL": "przerwać",
+            "APP_CONTACT_DELETE": "Usuń",
+            "APP_CONTACT_LABEL_NAME": "Imię - Nazwisko - Nazwisko",
+            "APP_CONTACT_LABEL_NUMBER": "cyfra",
+            "APP_MESSAGE_TITLE": "nowiny",
+            "APP_MESSAGE_NEW_MESSAGE": "Nowa wiadomość",
+            "APP_MESSAGE_ERASE_CONVERSATION": "Usuń połączenie",
+            "APP_MESSAGE_ERASE_ALL_CONVERSATIONS": "Usuń cały konwulsja.",
+            "APP_MESSAGE_SEND_GPS": "Wyślij sprzęgło GPS",
+            "APP_MESSAGE_SET_GPS": "Pozycja GPS",
+            "APP_MESSAGE_ZOOM_IMG": "Powiększyć",
+            "APP_MESSAGE_DELETE": "Usuń",
+            "APP_MESSAGE_SMS": "wiadomość tekstowa",
+            "APP_MESSAGE_CONTACT_TITLE": "styki",
+            "APP_MESSAGE_CONTRACT_ENTER_NUMBER": "Wprowadź numer",
+            "APP_MESSAGE_PLACEHOLDER_ENTER_MESSAGE": "Wyślij wiadomość",
+            "APP_DARKTCHAT_TITLE": "Czat czarny",
+            "APP_DARKTCHAT_NEW_CHANNEL": "Dodaj kanał",
+            "APP_DARKTCHAT_DELETE_CHANNEL": "Usuń kanał",
+            "APP_DARKTCHAT_CANCEL": "przerwać",
+            "APP_DARKTCHAT_PLACEHOLDER_ENTER_MESSAGE": "Wprowadź wiadomość",
+            "APP_TWITTER_NAME": "Twitter",
+            "APP_TWITTER_VIEW_TWITTER": "Twitter",
+            "APP_TWITTER_VIEW_TOP_TWEETS": "górne tweety",
+            "APP_TWITTER_VIEW_TWEETER": "tweety",
+            "APP_TWITTER_VIEW_SETTING": "parametr",
+            "APP_TWITTER_NEW_ACCOUNT_USERNAME": "Nazwa użytkownika (>= 4)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD": "Hasło (>= 6)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD_CONFIRM": "Potwierdź hasło",
+            "APP_TWITTER_NEW_ACCOUNT_AVATAR": "URL twojego awatara",
+            "APP_TWITTER_PLACEHOLDER_MESSAGE": "Co się z tobš dzieje?",
+            "APP_TWITTER_BUTTON_ACTION_TWEETER": "Głośnik wysokotonowy",
+            "APP_TWITTER_ACCOUNT_LOGIN": "Zaloguj się na stronie internetowej",
+            "APP_TWITTER_ACCOUNT_LOGOUT": "Odłączenie od lokalizacji",
+            "APP_TWITTER_ACCOUNT_PARAM": "Moje konto",
+            "APP_TWITTER_ACCOUNT_AVATAR": "Zmiana Avatara.",
+            "APP_TWITTER_ACCOUNT_CHANGE_PASSWORD": "Zmiana hasła",
+            "APP_TWITTER_ACCOUNT_NEW": "Nowe konto",
+            "APP_TWIITER_ACCOUNT_SAVE": "zameldowanie",
+            "APP_TWIITER_ACCOUNT_CREATE": "Utwórz konto",
+            "APP_TWIITER_ACCOUNT_CANCEL": "przerwać",
+            "APP_TWITTER_ACCOUNT_USERNAME": "login",
+            "APP_TWITTER_ACCOUNT_PASSWORD": "hasło",
+            "APP_TWITTER_NOTIFICATION": "zawiadomienie",
+            "APP_TWITTER_NOTIFICATION_WHEN": "Do powiadomienia",
+            "APP_TWITTER_NOTIFICATION_ALL": "Wszystkie wiadomości",
+            "APP_TWITTER_NOTIFICATION_MENTION": "Wystarczy wspomnieć",
+            "APP_TWITTER_NOTIFICATION_NEVER": "Nikt",
+            "APP_TWITTER_NOTIFICATION_SOUND": "Odtwarzanie dźwięku",
+            "APP_TWITTER_NOTIFICATION_SOUND_YES": "Tak, tak.",
+            "APP_TWITTER_NOTIFICATION_SOUND_NO": "Nie, nie.",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_SUCCESS": "Twoje konto na Twitterze zostało utworzone.",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_ERROR": "Twoje konto na Twitterze nie mogło zostać utworzone (nazwa użytkownika już użyta?).",
+            "APP_TWITTER_NOTIF_LOGIN_SUCCESS": "Jesteś połączony z Twitterem.",
+            "APP_TWITTER_NOTIF_LOGIN_ERROR": "Nieprawidłowe konto / hasła",
+            "APP_TWITTER_NOTIF_AVATAR_SUCCESS": "Twój awatar został zmieniony!",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_SUCCESS": "Twoje hasło zostało zmienione.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_ERROR": "Ups....... Twoje hasło nie mogło zostać zmienione.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_MISS_MATCH": "Hasła nie pasują do siebie.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_LENGTH_ERROR": "Hasło jest za krótkie",
+            "APP_APP_FOV": "Return",
+            "APP_APP_ANNO": "Annuler",
+            "TIMEAGO": [
+                "tylko teraz",
+                [
+                    "mniej niż minuta"
+                ],
+                [
+                    "około minuty",
+                    "%s minut"
+                ],
+                [
+                    "około godziny",
+                    "około %s godzin"
+                ],
+                [
+                    "około tygodnia",
+                    "%s tydzień"
+                ],
+                [
+                    "%s week ago",
+                    "%s weeks ago"
+                ],
+                [
+                    "około miesiąca",
+                    "%s miesięcy"
+                ],
+                [
+                    "około roku",
+                    "%s lat"
+                ]
+            ]
+        },
+        "es_ES": {
+            "NAME": "Spanish",
+            "PHONE_WARNING_MESSAGE": "recuerdo",
+            "PHONE_WARNING_MESSAGE_MESS": "noticias",
+            "CONFIRM": "Aceptar",
+            "CANCEL": "interrumpir",
+            "APP_CONFIG_TITLE": "paramétrico",
+            "APP_CONFIG_MY_MUNBER": "Mi número",
+            "APP_CONFIG_WALLPAPER": "empapelado",
+            "APP_CONFIG_CASE": "cobertura telefónica",
+            "APP_CONFIG_ZOOM": "acercamiento",
+            "APP_CONFIG_VOLUME": "envergadura",
+            "APP_CONFIG_LANGUAGE": "Idioma",
+            "APP_CONFIG_RESET": "modelo",
+            "APP_CONFIG_RESET_CONFIRM": "BORRAR TODO",
+            "APP_PHONE_CALL": "gritar",
+            "APP_PHONE_DELETE": "Borrar",
+            "APP_PHONE_DELETE_ALL": "Borrar todo.",
+            "APP_PHONE_TITLE": "Número de teléfono",
+            "APP_PHONE_MENU_FAVORITES": "preferidos",
+            "APP_PHONE_MENU_RECENTS": "Lo más nuevo",
+            "APP_PHONE_MENU_CONTACTS": "contactos",
+            "APP_PHONE_ENTER_NUMBER": "Introduzca un número",
+            "APP_BANK_TITLE": "banquillo",
+            "APP_BOURSE_TITLE": "bolsa de valores",
+            "APP_CONTACT_TITLE": "datos de contacto",
+            "APP_CONTACT_NEW": "Nuevo contacto",
+            "APP_CONTACT_EDIT": "Cambiar el contacto",
+            "APP_CONTACT_SAVE": "matriculación",
+            "APP_CONTACT_CANCEL": "interrumpir",
+            "APP_CONTACT_DELETE": "Borrar",
+            "APP_CONTACT_LABEL_NAME": "Nombre - Apellido",
+            "APP_CONTACT_LABEL_NUMBER": "número",
+            "APP_MESSAGE_TITLE": "noticias",
+            "APP_MESSAGE_NEW_MESSAGE": "Nuevo Mensaje",
+            "APP_MESSAGE_ERASE_CONVERSATION": "Borrar la llamada",
+            "APP_MESSAGE_ERASE_ALL_CONVERSATIONS": "Borrar todos los conv.",
+            "APP_MESSAGE_SEND_GPS": "Enviar acoplamiento GPS",
+            "APP_MESSAGE_SET_GPS": "posición GPS",
+            "APP_MESSAGE_ZOOM_IMG": "Ampliar",
+            "APP_MESSAGE_DELETE": "Borrar",
+            "APP_MESSAGE_SMS": "mensaje de texto",
+            "APP_MESSAGE_CONTACT_TITLE": "contactos",
+            "APP_MESSAGE_CONTRACT_ENTER_NUMBER": "Introduzca un número",
+            "APP_MESSAGE_PLACEHOLDER_ENTER_MESSAGE": "Enviar un mensaje",
+            "APP_DARKTCHAT_TITLE": "Chat Oscuro",
+            "APP_DARKTCHAT_NEW_CHANNEL": "Añadir un canal",
+            "APP_DARKTCHAT_DELETE_CHANNEL": "Borrar el canal",
+            "APP_DARKTCHAT_CANCEL": "interrumpir",
+            "APP_DARKTCHAT_PLACEHOLDER_ENTER_MESSAGE": "Escriba un mensaje",
+            "APP_TWITTER_NAME": "Twitter",
+            "APP_TWITTER_VIEW_TWITTER": "Twitter",
+            "APP_TWITTER_VIEW_TOP_TWEETS": "mejores tweets",
+            "APP_TWITTER_VIEW_TWEETER": "tweets",
+            "APP_TWITTER_VIEW_SETTING": "paramétrico",
+            "APP_TWITTER_NEW_ACCOUNT_USERNAME": "Nombre de usuario (>= 4)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD": "Contraseña (>= 6)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD_CONFIRM": "Confirmar contraseña",
+            "APP_TWITTER_NEW_ACCOUNT_AVATAR": "URL de tu avatar",
+            "APP_TWITTER_PLACEHOLDER_MESSAGE": "¿Qué es lo que te pasa?",
+            "APP_TWITTER_BUTTON_ACTION_TWEETER": "Tweeter",
+            "APP_TWITTER_ACCOUNT_LOGIN": "Iniciar sesión en el sitio web",
+            "APP_TWITTER_ACCOUNT_LOGOUT": "Desconectar de la ubicación",
+            "APP_TWITTER_ACCOUNT_PARAM": "Mi cuenta",
+            "APP_TWITTER_ACCOUNT_AVATAR": "Cambiando el Avatar",
+            "APP_TWITTER_ACCOUNT_CHANGE_PASSWORD": "Cambiar contraseña",
+            "APP_TWITTER_ACCOUNT_NEW": "Nueva cuenta",
+            "APP_TWIITER_ACCOUNT_SAVE": "matriculación",
+            "APP_TWIITER_ACCOUNT_CREATE": "Crear la cuenta",
+            "APP_TWIITER_ACCOUNT_CANCEL": "interrumpir",
+            "APP_TWITTER_ACCOUNT_USERNAME": "nombre de usuario",
+            "APP_TWITTER_ACCOUNT_PASSWORD": "contraseña",
+            "APP_TWITTER_NOTIFICATION": "comunicación",
+            "APP_TWITTER_NOTIFICATION_WHEN": "Para ser notificado",
+            "APP_TWITTER_NOTIFICATION_ALL": "Todas las noticias",
+            "APP_TWITTER_NOTIFICATION_MENTION": "Sólo mencione",
+            "APP_TWITTER_NOTIFICATION_NEVER": "Nadie",
+            "APP_TWITTER_NOTIFICATION_SOUND": "Reproducir un sonido",
+            "APP_TWITTER_NOTIFICATION_SOUND_YES": "Sí",
+            "APP_TWITTER_NOTIFICATION_SOUND_NO": "No",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_SUCCESS": "Tu cuenta de Twitter ha sido creada.",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_ERROR": "Tu cuenta de Twitter no ha podido ser creada (nombre de usuario ya utilizado?)",
+            "APP_TWITTER_NOTIF_LOGIN_SUCCESS": "Estás conectado a Twitter.",
+            "APP_TWITTER_NOTIF_LOGIN_ERROR": "Cuenta no válida / contraseñas",
+            "APP_TWITTER_NOTIF_AVATAR_SUCCESS": "Tu avatar ha cambiado!",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_SUCCESS": "Su contraseña ha sido cambiada.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_ERROR": "Oops...... Su contraseña no se ha podido cambiar.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_MISS_MATCH": "Las contraseñas no coinciden",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_LENGTH_ERROR": "Contraseña demasiado corta",
+            "APP_APP_FOV": "Return",
+            "APP_APP_ANNO": "Annuler",
+            "TIMEAGO": [
+                "ahora",
+                [
+                    "hace %s segundo",
+                    "hace %s segundos"
+                ],
+                [
+                    "hace %s minuto",
+                    "hace %s minutos"
+                ],
+                [
+                    "hace %s hora",
+                    "hace %s horas"
+                ],
+                [
+                    "hace %s día",
+                    "hace %s días"
+                ],
+                [
+                    "hace %s semana",
+                    "hace %s semanas"
+                ],
+                [
+                    "hace %s mes",
+                    "hace %s meses"
+                ],
+                [
+                    "hace %s año",
+                    "hace %s años"
+                ]
+            ]
+        },
+        "cs_CZ": {
+            "NAME": "Čeština",
+            "PHONE_WARNING_MESSAGE": "připomínka",
+            "PHONE_WARNING_MESSAGE_MESS": "zprávy",
+            "CONFIRM": "Přijmout",
+            "CANCEL": "Zrušit",
+            "APP_CONFIG_TITLE": "nastavení",
+            "APP_CONFIG_MY_MUNBER": "Mé číslo",
+            "APP_CONFIG_WALLPAPER": "tapeta",
+            "APP_CONFIG_CASE": "kryt telefonu",
+            "APP_CONFIG_ZOOM": "přiblížení",
+            "APP_CONFIG_VOLUME": "hlasitost",
+            "APP_CONFIG_LANGUAGE": "Jazyk",
+            "APP_CONFIG_MOUSE_SUPPORT": "Ovldání myší",
+            "APP_CONFIG_RESET": "resetovat",
+            "APP_CONFIG_RESET_CONFIRM": "SMAZAT VŠE",
+            "APP_PHONE_CALL": "volat",
+            "APP_PHONE_DELETE": "Smazat",
+            "APP_PHONE_DELETE_ALL": "Smazat vše.",
+            "APP_PHONE_TITLE": "Telefonní číslo",
+            "APP_PHONE_MENU_FAVORITES": "oblíbené",
+            "APP_PHONE_MENU_RECENTS": "Nejnovější",
+            "APP_PHONE_MENU_CONTACTS": "kontakty",
+            "APP_PHONE_ENTER_NUMBER": "Zadej číslo",
+            "APP_BANK_TITLE": "banka",
+            "APP_BOURSE_TITLE": "burza",
+            "APP_CONTACT_TITLE": "detaily kontaktu",
+            "APP_CONTACT_NEW": "Nový kontakt",
+            "APP_CONTACT_EDIT": "Změnit kontakt",
+            "APP_CONTACT_SAVE": "registrace",
+            "APP_CONTACT_CANCEL": "zrušit",
+            "APP_CONTACT_DELETE": "Smazat",
+            "APP_CONTACT_LABEL_NAME": "Křestní jméno - Příjmení",
+            "APP_CONTACT_LABEL_NUMBER": "číslo",
+            "APP_MESSAGE_TITLE": "zprávy",
+            "APP_MESSAGE_NEW_MESSAGE": "Nová zpráva",
+            "APP_MESSAGE_ERASE_CONVERSATION": "Smazat hovor",
+            "APP_MESSAGE_ERASE_ALL_CONVERSATIONS": "Smazat všechny konver.",
+            "APP_MESSAGE_SEND_GPS": "Poslat GPS polohu",
+            "APP_MESSAGE_SET_GPS": "GPS pozise",
+            "APP_MESSAGE_ZOOM_IMG": "Přiblížit",
+            "APP_MESSAGE_DELETE": "Smazat",
+            "APP_MESSAGE_SMS": "textová zpráva",
+            "APP_MESSAGE_CONTACT_TITLE": "kontakty",
+            "APP_MESSAGE_CONTRACT_ENTER_NUMBER": "Zadej číslo",
+            "APP_MESSAGE_PLACEHOLDER_ENTER_MESSAGE": "Odeslat zprávu",
+            "APP_DARKTCHAT_TITLE": "Dark Chat",
+            "APP_DARKTCHAT_NEW_CHANNEL": "Přidat kanál",
+            "APP_DARKTCHAT_DELETE_CHANNEL": "Delete the channel",
+            "APP_DARKTCHAT_CANCEL": "zrušit",
+            "APP_DARKTCHAT_PLACEHOLDER_ENTER_MESSAGE": "Zadej zprávu",
+            "APP_TWITTER_NAME": "Twitter",
+            "APP_TWITTER_VIEW_TWITTER": "Twitter",
+            "APP_TWITTER_VIEW_TOP_TWEETS": "nejlepší tweety",
+            "APP_TWITTER_VIEW_TWEETER": "tweety",
+            "APP_TWITTER_VIEW_SETTING": "nastavení",
+            "APP_TWITTER_NEW_ACCOUNT_USERNAME": "Přezdívka (>= 4)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD": "Heslo (>= 6)",
+            "APP_TWITTER_NEW_ACCOUNT_PASSWORD_CONFIRM": "Potvrdit heslo",
+            "APP_TWITTER_NEW_ACCOUNT_AVATAR": "URL avataru",
+            "APP_TWITTER_PLACEHOLDER_MESSAGE": "Co máš na mysli?",
+            "APP_TWITTER_BUTTON_ACTION_TWEETER": "Tweetnout",
+            "APP_TWITTER_ACCOUNT_LOGIN": "Přihlásit se na stránku",
+            "APP_TWITTER_ACCOUNT_LOGOUT": "Odhlásit se",
+            "APP_TWITTER_ACCOUNT_PARAM": "Můj účet",
+            "APP_TWITTER_ACCOUNT_AVATAR": "Měním avatar",
+            "APP_TWITTER_ACCOUNT_CHANGE_PASSWORD": "Změnit heslo",
+            "APP_TWITTER_ACCOUNT_NEW": "Nový účet",
+            "APP_TWIITER_ACCOUNT_SAVE": "registrace",
+            "APP_TWIITER_ACCOUNT_CREATE": "Vytvořit účet",
+            "APP_TWIITER_ACCOUNT_CANCEL": "zrušit",
+            "APP_TWITTER_ACCOUNT_USERNAME": "přezdívka",
+            "APP_TWITTER_ACCOUNT_PASSWORD": "heslo",
+            "APP_TWITTER_NOTIFICATION": "notifikace",
+            "APP_TWITTER_NOTIFICATION_WHEN": "Bude  oznámeno",
+            "APP_TWITTER_NOTIFICATION_ALL": "Všechny zprávy",
+            "APP_TWITTER_NOTIFICATION_MENTION": "Jen zmínit",
+            "APP_TWITTER_NOTIFICATION_NEVER": "Nikdo",
+            "APP_TWITTER_NOTIFICATION_SOUND": "Přehrát zvuk",
+            "APP_TWITTER_NOTIFICATION_SOUND_YES": "Ano",
+            "APP_TWITTER_NOTIFICATION_SOUND_NO": "Ne",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_SUCCESS": "Tvůj twitter byl vytvořen.",
+            "APP_TWITTER_NOTIF_ACCOUNT_CREATE_ERROR": "Tvůj twitter účet nemohl být vytvořen (přezdívka již existuje?)",
+            "APP_TWITTER_NOTIF_LOGIN_SUCCESS": "Jsi připojen na Twitter.",
+            "APP_TWITTER_NOTIF_LOGIN_ERROR": "Neplatný účet / heslo",
+            "APP_TWITTER_NOTIF_AVATAR_SUCCESS": "Tvůj avatar byl změněn!",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_SUCCESS": "Tvé heslo bylo změněno.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_ERROR": "Oops.... Tvé heslo nemohlo být změněno.",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_MISS_MATCH": "Hesla se neshodují",
+            "APP_TWITTER_NOTIF_NEW_PASSWORD_LENGTH_ERROR": "Heslo je příliš krátké",
+            "APP_APP_FOV": "Return",
+            "APP_APP_ANNO": "Annuler",
+            "TIMEAGO": [
+                "nyní",
+                [
+                    "před  %s sekundou",
+                    "před %s sekundami"
+                ],
+                [
+                    "před %s minutou",
+                    "před %s minutami"
+                ],
+                [
+                    "před %s hodinou",
+                    "před %s hodinami"
+                ],
+                [
+                    "před %s dnem",
+                    "před %s dny"
+                ],
+                [
+                    "před %s týdnem",
+                    "před %s týdny"
+                ],
+                [
+                    "před %s měsícem",
+                    "před %s měsíci"
+                ],
+                [
+                    "před %s rokem",
+                    "před %s lety"
+                ]
+            ]
+        }
+    }
+}

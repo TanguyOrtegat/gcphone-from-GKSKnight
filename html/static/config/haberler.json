@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "title": "Novosti",
+    "writer": "mit0man",
+    "hour": "12:00",
+    "picture": "https://pbs.twimg.com/profile_images/702982240184107008/tUKxvkcs_400x400.jpg",
+    "detail": "Dušan nije dobio unban i kupio je mikrofon, Nav je lijen i dalje, Mitro smara, Bokistaki gej bolničar i Joksa je makedonac."
+  },
+  {
+    "id": 1,
+    "title": "Vijest 1",
+    "writer": "Autor",
+    "hour": "12:00",
+    "picture": "https://pbs.twimg.com/profile_images/702982240184107008/tUKxvkcs_400x400.jpg",
+    "detail": "Ovdje moze biti tvoja vijest"
+
+  },
+  {
+    "id": 2,
+    "title": "Vijest 2",
+    "writer": "Autor",
+    "hour": "12:00",
+    "picture": "https://pbs.twimg.com/profile_images/702982240184107008/tUKxvkcs_400x400.jpg",
+    "detail": "Ovdje moze biti tvoja vijest"
+  }
+]
