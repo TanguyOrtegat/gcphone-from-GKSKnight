@@ -2,6 +2,7 @@
 -- #Author: Jonathan D @Gannon
 -- #Version 2.0
 --====================================================================================
+
 math.randomseed(os.time()) 
 
 --- Pour les numero du style XXX-XXXX
@@ -28,7 +29,7 @@ local ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) 
     ESX = obj 
     ESX.RegisterServerCallback('gcphone:getItemAmount', function(source, cb, item)
-        -- print('gcphone:getItemAmount call item : ' .. item)
+        print('gcphone:getItemAmount call item : ' .. item)
         local xPlayer = ESX.GetPlayerFromId(source)
         local items = xPlayer.getInventoryItem(item)
         if items == nil then
@@ -64,8 +65,7 @@ function getNumberPhone(identifier)
     return nil
 end
 function getIdentifierByPhoneNumber(phone_number) 
-    -- local result = MySQL.Sync.fetchAll("SELECT users.identifier FROM users WHERE users.phone_number = @phone_number", {
-    local result = MySQL.Sync.fetchAll("SELECT user_sim.identifier FROM user_sim WHERE user_sim.phone_number = @phone_number", {
+    local result = MySQL.Sync.fetchAll("SELECT users.identifier FROM users WHERE users.phone_number = @phone_number", {
         ['@phone_number'] = phone_number
     })
     if result[1] ~= nil then
@@ -563,15 +563,15 @@ end)
 --====================================================================================
 --  OnLoad
 --====================================================================================
--- AddEventHandler('es:playerLoaded',function(source)
-    -- local sourcePlayer = tonumber(source)
-    -- local identifier = getPlayerID(source)
-    -- getOrGeneratePhoneNumber(sourcePlayer, identifier, function (myPhoneNumber)
-        -- TriggerClientEvent("gcPhone:myPhoneNumber", sourcePlayer, myPhoneNumber)
-        -- TriggerClientEvent("gcPhone:contactList", sourcePlayer, getContacts(identifier))
-        -- TriggerClientEvent("gcPhone:allMessage", sourcePlayer, getMessages(identifier))
-    -- end)
--- end)
+AddEventHandler('es:playerLoaded',function(source)
+    local sourcePlayer = tonumber(source)
+    local identifier = getPlayerID(source)
+    getOrGeneratePhoneNumber(sourcePlayer, identifier, function (myPhoneNumber)
+        TriggerClientEvent("gcPhone:myPhoneNumber", sourcePlayer, myPhoneNumber)
+        TriggerClientEvent("gcPhone:contactList", sourcePlayer, getContacts(identifier))
+        TriggerClientEvent("gcPhone:allMessage", sourcePlayer, getMessages(identifier))
+    end)
+end)
 
 -- Just For reload
 RegisterServerEvent('gcPhone:allUpdate')
@@ -721,152 +721,3 @@ function onRejectFixePhone(source, infoCall, rtcAnswer)
     AppelsEnCours[id] = nil
     
 end
-
-
--- ==== sim
-
-function GenerateUniquePhoneNumber()
-    local running = true
-    local phone = nil
-    while running do
-		--local num = '555' .. math.random(0001,9999)
-		local numBase0 = math.random(555,555)
-   		local numBase1 = math.random(0,99999)
-		local rand = string.format("%03d%04d", numBase0, numBase1 )
-      --  --('Recherche ... : ' .. rand)
-        local count = MySQL.Sync.fetchScalar("SELECT COUNT(phone_number) FROM user_sim WHERE phone_number = @phone_number", { ['@phone_number'] = rand })
-        if count < 1 then
-            phone = rand
-            running = false
-        end
-    end
-  --  --('Numero Choisi  : ' .. phone)
-    return phone
-end
-
-function GetNummerFromId(id)
-	local result = MySQL.Sync.fetchAll("SELECT phone_number, identifier FROM user_sim WHERE id = @id", {
-		['@id'] = id
-	})	  
-	if result[1] ~= nil then
-		return result[1].phone_number, result[1].identifier
-	else
-		return nil
-	end
-end
-
-
-ESX.RegisterUsableItem('sim', function(source)
-	local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-	
-	xPlayer.removeInventoryItem ('sim', 1)
-	local phoneNumber = GenerateUniquePhoneNumber() 
-	
-	MySQL.Async.execute(
-		'INSERT INTO user_sim (phone_number, identifier, label) VALUES (@phone_number, @identifier, @label)',
-		{
-			['@phone_number']   = phoneNumber,
-			['@identifier']   = xPlayer.identifier,
-			['@label']   = "SIM "..phoneNumber,
-		},
-		function (rowsChanged)
-			TriggerClientEvent('esx:showNotification', _source, "Vous avez une nouvelle carte sim: ~g~"..phoneNumber)
-		end
-	)
-end)
-
---donner la carte sim a un autre joueur
-RegisterServerEvent('esx_cartesim:sim_give')
-AddEventHandler('esx_cartesim:sim_give', function (simcardid, playerid, numberinphone)
-	local _source = source	
-	if playerid ~= 0 then
-		local xPlayer2 = ESX.GetPlayerFromId(playerid)
-		local number, identifier = GetNummerFromId(simcardid)
-		TriggerClientEvent('esx:showNotification', _source, "Vous avez donné la carte sim ~o~" .. number)
-		TriggerClientEvent('esx:showNotification', playerid, "Vous avez recu la carte sim ~o~" .. number)
-		MySQL.Async.execute(
-			'UPDATE sim SET identifier = @identifier WHERE id = @id',
-			{
-				['@identifier'] = xPlayer2.identifier,
-				['@id'] = simcardid
-			}
-		)
-		if numberinphone then
-			MySQL.Async.execute(
-				'UPDATE users SET phone_number = @phone_number WHERE identifier = @identifier and phone_number= @number',
-				{
-					['@identifier'] = identifier,
-					['@phone_number'] = 0,
-					['@number'] = number
-				}
-			)
-			TriggerClientEvent("gcphone:myPhoneNumber", _source, 0)
-		end
-	end
-end)
-
---supprimer la carte sim
-RegisterServerEvent('esx_cartesim:sim_delete')
-AddEventHandler('esx_cartesim:sim_delete', function (simcardid)
-	local _source = source
-	TriggerClientEvent("gcphone:myPhoneNumber", _source, 0)
-	local number, identifier = GetNummerFromId(simcardid)
-	MySQL.Async.execute(
-		'DELETE FROM user_sim WHERE id = @id',
-		{ 
-			['@id'] = simcardid 
-		}
-	)
-	MySQL.Async.execute(
-		'UPDATE users SET phone_number = @phone_number WHERE identifier = @identifier and phone_number= @number',
-		{
-			['@identifier'] = identifier,
-			['@phone_number'] = 0,
-			['@number'] = number
-		}
-	)
-	
-end)
-
---changer de carte sim (need change identifier inside phone_users_contacts)
-RegisterServerEvent('esx_cartesim:sim_use')
-AddEventHandler('esx_cartesim:sim_use', function (sim)
-	local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-	TriggerClientEvent("gcphone:myPhoneNumber",_source,sim)
-
-	MySQL.Async.execute(
-		'UPDATE users SET phone_number = @phone_number WHERE identifier = @identifier',
-		{
-			['@identifier'] = xPlayer.getIdentifier(),
-			['@phone_number'] = sim
-		}
-	)
-end)
-
---Recupere les cartes sim
-ESX.RegisterServerCallback('esx_cartesim:GetList', function(source, cb)
-	local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-	local cartesim = {}
-
-	MySQL.Async.fetchAll("SELECT phone_number, label, id  FROM user_sim WHERE identifier=@identifier",{['@identifier'] = xPlayer.getIdentifier()}, function(data) 
-		for _,v in pairs(data) do
-			table.insert(cartesim, {number = v.phone_number, label = v.label, id = v.id})
-		end
-		cb(cartesim)
-	end)
-end)
-
-RegisterServerEvent("esx_cartesim:sim_rename")
-AddEventHandler("esx_cartesim:sim_rename", function(id, txt)
-  MySQL.Async.execute(
-    'UPDATE user_sim SET label = @label WHERE id=@id',
-    {
-      ['@id'] = id,
-      ['@label'] = txt
-
-    }
-  )
-end)
