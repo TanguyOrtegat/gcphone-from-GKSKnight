@@ -151,10 +151,9 @@ RegisterNUICallback('takeInsPro', function(data, cb)
       break
     elseif IsControlJustPressed(1, 176) then -- TAKE.. PIC
 			exports['screenshot-basic']:requestScreenshotUpload(data.url, data.field, function(data)
-        local resp = json.decode(data)
         DestroyMobilePhone()
         CellCamActivate(false, false)
-        cb(json.encode({ url = resp.files[1].url })) 
+        cb(json.encode({ url = data })) 
       SetNuiFocus(true, true)		
       end)
       takeInsPro = false
