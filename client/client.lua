@@ -1,7 +1,17 @@
 --====================================================================================
 -- #Author: Jonathan D @ Gannon
 --====================================================================================
- 
+ local Keys = {
+  ["ESC"] = 322, ["F1"] = 288, ["F2"] = 289, ["F3"] = 170, ["F5"] = 166, ["F6"] = 167, ["F7"] = 168, ["F8"] = 169, ["F9"] = 56, ["F10"] = 57,
+  ["~"] = 243, ["1"] = 157, ["2"] = 158, ["3"] = 160, ["4"] = 164, ["5"] = 165, ["6"] = 159, ["7"] = 161, ["8"] = 162, ["9"] = 163, ["-"] = 84, ["="] = 83, ["BACKSPACE"] = 177,
+  ["TAB"] = 37, ["Q"] = 44, ["W"] = 32, ["E"] = 38, ["R"] = 45, ["T"] = 245, ["Y"] = 246, ["U"] = 303, ["P"] = 199, ["["] = 39, ["]"] = 40, ["ENTER"] = 18,
+  ["CAPS"] = 137, ["A"] = 34, ["S"] = 8, ["D"] = 9, ["F"] = 23, ["G"] = 47, ["H"] = 74, ["K"] = 311, ["L"] = 182,
+  ["LEFTSHIFT"] = 21, ["Z"] = 20, ["X"] = 73, ["C"] = 26, ["V"] = 0, ["B"] = 29, ["N"] = 249, ["M"] = 244, [","] = 82, ["."] = 81,
+  ["LEFTCTRL"] = 36, ["LEFTALT"] = 19, ["SPACE"] = 22, ["RIGHTCTRL"] = 70,
+  ["HOME"] = 213, ["PAGEUP"] = 10, ["PAGEDOWN"] = 11, ["DELETE"] = 178,
+  ["LEFT"] = 174, ["RIGHT"] = 175, ["TOP"] = 27, ["DOWN"] = 173,
+  ["NENTER"] = 201, ["N4"] = 108, ["N5"] = 60, ["N6"] = 107, ["N+"] = 96, ["N-"] = 97, ["N7"] = 117, ["N8"] = 61, ["N9"] = 118
+}
 -- Configuration
 local KeyToucheCloseEvent = {
   { code = 172, event = 'ArrowUp' },
@@ -11,8 +21,9 @@ local KeyToucheCloseEvent = {
   { code = 176, event = 'Enter' },
   { code = 177, event = 'Backspace' },
 }
-local KeyOpenClose = 288 -- F2
-local KeyTakeCall = 38 -- E
+local KeyOpenClose = Keys["F2"] -- F2
+local KeyTakeCall = Keys["E"] -- E
+local KeySimMenu = Keys["N9"] -- N9
 local menuIsOpen = false
 local contacts = {}
 local messages = {}
@@ -27,20 +38,7 @@ local hasFocus = false
 local PhoneInCall = {}
 local currentPlaySound = false
 local soundDistanceMax = 8.0
-
-
---====================================================================================
---  Check si le joueurs poséde un téléphone
---  Callback true or false
---====================================================================================
-function hasPhone (cb)
-  cb(true)
-end
---====================================================================================
---  Que faire si le joueurs veut ouvrir sont téléphone n'est qu'il en a pas ?
---====================================================================================
-function ShowNoPhoneWarning ()
-end
+local TokoVoipID = nil
 
 --[[
   Ouverture du téphone lié a un item
@@ -55,39 +53,30 @@ Citizen.CreateThread(function()
 		Citizen.Wait(0)
   end
 end)
-
-function hasPhone (cb)
-  if (ESX == nil) then return cb(0) end
-  ESX.TriggerServerCallback('gcphone:getItemAmount', function(qtty)
-    cb(qtty > 0)
-  end, 'phone')
-end
-function ShowNoPhoneWarning () 
-  if (ESX == nil) then return end
-  ESX.ShowNotification("Vous n'avez pas de ~r~téléphone~s~")
-end
-
-
-
 --====================================================================================
 --  
 --====================================================================================
+AddEventHandler('gcphone:OpenSimMenu', function()
+	OpenSimMenu()
+end)
+
+local simmenuopen = false
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
     if takePhoto ~= true then
-      if IsControlJustPressed(1, KeyOpenClose) then
-        hasPhone(function (hasPhone)
-          if hasPhone == true then
-            TooglePhone()
-          else
-            ShowNoPhoneWarning()
-          end
-        end)
+      if IsControlJustPressed(1, KeyOpenClose) and GetLastInputMethod(2) and not simmenuopen then
+		CheckPhone()
+      -- elseif IsControlJustPressed(1, KeySimMenu) and GetLastInputMethod(2) and not menuIsOpen then
+		-- OpenSimMenu()
+			  
+								
+			 
+			
       end
       if menuIsOpen == true then
         for _, value in ipairs(KeyToucheCloseEvent) do
-          if IsControlJustPressed(1, value.code) then
+          if IsControlJustPressed(1, value.code) and GetLastInputMethod(2) then
             SendNUIMessage({keyUp = value.event})
           end
         end
@@ -161,7 +150,7 @@ function showFixePhoneHelper (coords)
       SetTextComponentFormat("STRING")
       AddTextComponentString("~g~" .. data.name .. ' ~o~' .. number .. '~n~~INPUT_PICKUP~~w~ Utiliser')
       DisplayHelpTextFromStringLabel(0, 0, 0, -1)
-      if IsControlJustPressed(1, KeyTakeCall) then
+      if IsControlJustPressed(1, KeyTakeCall) and GetLastInputMethod(2) then
         startFixeCall(number)
       end
       break
@@ -190,7 +179,7 @@ Citizen.CreateThread(function ()
             SetTextComponentFormat("STRING")
             AddTextComponentString("~INPUT_PICKUP~ Décrocher")
             DisplayHelpTextFromStringLabel(0, 0, 1, -1)
-            if IsControlJustPressed(1, KeyTakeCall) then
+            if IsControlJustPressed(1, KeyTakeCall) and GetLastInputMethod(2) then
               PhonePlayCall(true)
               TakeAppel(PhoneInCall[i])
               PhoneInCall = {}
@@ -361,6 +350,7 @@ end
 
 RegisterNetEvent("gcPhone:getlicense")
 AddEventHandler("gcPhone:getlicense", function(license)
+	print(ESX.DumpTable(license))
   SendNUIMessage({event = 'updateLicense', license = license})
 end)
 
@@ -385,8 +375,11 @@ RegisterNetEvent("gcPhone:acceptCall")
 AddEventHandler("gcPhone:acceptCall", function(infoCall, initiator)
   if inCall == false and USE_RTC == false then
     inCall = true
-    NetworkSetVoiceChannel(infoCall.id + 1)
-    NetworkSetTalkerProximity(0.0)
+    -- NetworkSetVoiceChannel(infoCall.id + 1)
+    -- NetworkSetTalkerProximity(0.0)
+	local number = tonumber("9999"..infoCall.id + 120)
+	exports.tokovoip_script:addPlayerToRadio(number)
+	TokoVoipID = number				
   end
   if menuIsOpen == false then 
     TooglePhone()
@@ -400,7 +393,9 @@ AddEventHandler("gcPhone:rejectCall", function(infoCall)
   if inCall == true then
     inCall = false
     Citizen.InvokeNative(0xE036A705F989E049)
-    NetworkSetTalkerProximity(2.5)
+    -- NetworkSetTalkerProximity(2.5)
+	exports.tokovoip_script:removePlayerFromRadio(TokoVoipID)
+	TokoVoipID = nil		 
   end
   PhonePlayText()
   SendNUIMessage({event = 'rejectCall', infoCall = infoCall})
@@ -469,8 +464,10 @@ RegisterNUICallback('notififyUseRTC', function (use, cb)
   USE_RTC = use
   if USE_RTC == true and inCall == true then
     inCall = false
-    Citizen.InvokeNative(0xE036A705F989E049)
-    NetworkSetTalkerProximity(2.5)
+    -- Citizen.InvokeNative(0xE036A705F989E049)
+    -- NetworkSetTalkerProximity(2.5)
+	exports.tokovoip_script:removePlayerFromRadio(TokoVoipID)
+	TokoVoipID = nil			 
   end
   cb()
 end)
@@ -655,6 +652,8 @@ RegisterNUICallback('callEvent', function(data, cb)
   end
   cb()
 end)
+
+
 RegisterNUICallback('useMouse', function(um, cb)
   useMouse = um
 end)
@@ -746,20 +745,21 @@ RegisterNUICallback('takePhoto', function(data, cb)
 	while takePhoto do
     Citizen.Wait(0)
 
-		if IsControlJustPressed(1, 27) then -- Toogle Mode
+		if IsControlJustPressed(1, 27)  and GetLastInputMethod(2) then -- Toogle Mode
 			frontCam = not frontCam
 			CellFrontCamActivate(frontCam)
-    elseif IsControlJustPressed(1, 177) then -- CANCEL
+    elseif IsControlJustPressed(1, 177)  and GetLastInputMethod(2) then -- CANCEL
       DestroyMobilePhone()
       CellCamActivate(false, false)
       cb(json.encode({ url = nil }))
       takePhoto = false
       break
-    elseif IsControlJustPressed(1, 176) then -- TAKE.. PIC
-		exports['screenshot-basic']:requestScreenshotUpload(data.url, data.field, function(data)
+    elseif IsControlJustPressed(1, 176)  and GetLastInputMethod(2) then -- TAKE.. PIC
+			exports['screenshot-basic']:requestScreenshotUpload(data.url, data.field, function(data)
+        --local resp = json.decode(data)
         DestroyMobilePhone()
         CellCamActivate(false, false)
-        cb(json.encode({ url = data })) 	
+        cb(json.encode({ url = resp.files[1].url }))
       end)
       takePhoto = false
 		end

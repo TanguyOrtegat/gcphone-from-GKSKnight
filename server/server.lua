@@ -2,7 +2,6 @@
 -- #Author: Jonathan D @Gannon
 -- #Version 2.0
 --====================================================================================
-
 math.randomseed(os.time()) 
 
 --- Pour les numero du style XXX-XXXX
@@ -29,7 +28,7 @@ local ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) 
     ESX = obj 
     ESX.RegisterServerCallback('gcphone:getItemAmount', function(source, cb, item)
-        print('gcphone:getItemAmount call item : ' .. item)
+        -- print('gcphone:getItemAmount call item : ' .. item)
         local xPlayer = ESX.GetPlayerFromId(source)
         local items = xPlayer.getInventoryItem(item)
         if items == nil then
@@ -65,7 +64,8 @@ function getNumberPhone(identifier)
     return nil
 end
 function getIdentifierByPhoneNumber(phone_number) 
-    local result = MySQL.Sync.fetchAll("SELECT users.identifier FROM users WHERE users.phone_number = @phone_number", {
+    -- local result = MySQL.Sync.fetchAll("SELECT users.identifier FROM users WHERE users.phone_number = @phone_number", {
+    local result = MySQL.Sync.fetchAll("SELECT user_sim.identifier FROM user_sim WHERE user_sim.phone_number = @phone_number", {
         ['@phone_number'] = phone_number
     })
     if result[1] ~= nil then
@@ -563,15 +563,15 @@ end)
 --====================================================================================
 --  OnLoad
 --====================================================================================
-AddEventHandler('es:playerLoaded',function(source)
-    local sourcePlayer = tonumber(source)
-    local identifier = getPlayerID(source)
-    getOrGeneratePhoneNumber(sourcePlayer, identifier, function (myPhoneNumber)
-        TriggerClientEvent("gcPhone:myPhoneNumber", sourcePlayer, myPhoneNumber)
-        TriggerClientEvent("gcPhone:contactList", sourcePlayer, getContacts(identifier))
-        TriggerClientEvent("gcPhone:allMessage", sourcePlayer, getMessages(identifier))
-    end)
-end)
+-- AddEventHandler('es:playerLoaded',function(source)
+    -- local sourcePlayer = tonumber(source)
+    -- local identifier = getPlayerID(source)
+    -- getOrGeneratePhoneNumber(sourcePlayer, identifier, function (myPhoneNumber)
+        -- TriggerClientEvent("gcPhone:myPhoneNumber", sourcePlayer, myPhoneNumber)
+        -- TriggerClientEvent("gcPhone:contactList", sourcePlayer, getContacts(identifier))
+        -- TriggerClientEvent("gcPhone:allMessage", sourcePlayer, getMessages(identifier))
+    -- end)
+-- end)
 
 -- Just For reload
 RegisterServerEvent('gcPhone:allUpdate')
