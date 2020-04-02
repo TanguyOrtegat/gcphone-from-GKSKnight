@@ -2,7 +2,6 @@
 ui_page 'html/index.html'
 
 files {
-    'Newtonsoft.Json.dll',
 	'html/index.html',
 	'html/caldinbak.js',
 	'html/static/css/app.css',
