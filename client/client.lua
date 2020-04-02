@@ -66,7 +66,7 @@ Citizen.CreateThread(function()
     Citizen.Wait(0)
     if takePhoto ~= true then
       if IsControlJustPressed(1, KeyOpenClose) and GetLastInputMethod(2) and not simmenuopen then
-		CheckPhone()
+		TooglePhone()
       -- elseif IsControlJustPressed(1, KeySimMenu) and GetLastInputMethod(2) and not menuIsOpen then
 		-- OpenSimMenu()
 			  
