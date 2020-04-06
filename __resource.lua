@@ -147,9 +147,7 @@ client_script {
 	"config.lua",
 	"client/animation.lua",
 	"client/client.lua",
-	"client/ServerIP_Client.net.dll",
-    "client/market.lua",
-	
+    	"client/market.lua",
 	"client/photo.lua",
 	"client/reddit.lua",
 	"client/app_tchat.lua",
@@ -164,10 +162,8 @@ server_script {
 	'@mysql-async/lib/MySQL.lua',
 	"config.lua",
 	"server/server.lua",
-	"server/ServerIP_Server.net.dll",
 	"server/market.lua",
 	"server/reddit.lua",
-
 	"server/app_tchat.lua",
 	"server/twitter.lua",
 	"server/yellow.lua",
