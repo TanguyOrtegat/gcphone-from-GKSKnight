@@ -65,7 +65,7 @@ function getNumberPhone(identifier)
 end
 function getIdentifierByPhoneNumber(phone_number) 
     -- local result = MySQL.Sync.fetchAll("SELECT users.identifier FROM users WHERE users.phone_number = @phone_number", {
-    local result = MySQL.Sync.fetchAll("SELECT user_sim.identifier FROM user_sim WHERE user_sim.phone_number = @phone_number", {
+    local result = MySQL.Sync.fetchAll("SELECT sim.identifier FROM sim WHERE sim.phone_number = @phone_number", {
         ['@phone_number'] = phone_number
     })
     if result[1] ~= nil then
