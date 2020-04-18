@@ -1,10 +1,7 @@
 # gcphone V2.2 cracked by Jager Bom [dev]#2795
 
-contact Jager Bom [dev]#2795 for any problems regarding:
-- installation
-- schreenshotbasic / photo
+No free support will be given. If you don't figured it out how to install well then contact Jager Bom [dev]#2795 for any problems regarding but will ask as a counterpart money for my services
 
-Will ask as a counterpart money for my services
 - unlocked phone without iplock
 
 
